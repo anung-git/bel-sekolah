@@ -1,0 +1,1752 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000001  l_BSEG_BYTES                    
+C:   00000001  l_OSEG                          
+C:   00000001  s_PSEG                          
+C:   00000001  s_XISEG                         
+C:   00000001  s_XSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000006  l_BSEG                          
+C:   00000006  l_HOME                          
+C:   00000006  s_GSINIT0                       
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   00000009  s_GSINIT1                       
+C:   00000009  s_GSINIT2                       
+C:   0000000A  l_GSINIT2                       
+C:   00000010  s_REG_BANK_2                    
+C:   00000013  s_GSINIT3                       
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_REG_BANK_3                    
+C:   00000019  s_OSEG                          
+C:   00000020  l_GSINIT                        
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000020  s_BSEG_BYTES                    
+C:   00000020  s__CODE                         
+C:   00000021  l_CONST                         
+C:   00000021  s_SSEG                          
+C:   00000022  l_GSINIT3                       
+C:   0000002A  l_GSINIT4                       
+C:   00000035  s_GSINIT4                       
+C:   0000005F  s_GSINIT                        
+C:   0000005F  s_GSINIT5                       
+C:   0000007A  l_DSEG                          
+C:   0000007F  s_GSFINAL                       
+C:   00000082  s_CSEG                          
+C:   000000DF  l_SSEG                          
+C:   00000100  l_IRAM                          
+C:   0000048B  l_CSEG                          
+C:   0000050D  s_CONST                         
+C:   0000052E  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  G$P0$0$0                           BEL_SEKOLAH
+     00000080  G$P0_0$0$0                         BEL_SEKOLAH
+     00000080  _P0                                BEL_SEKOLAH
+     00000080  _P0_0                              BEL_SEKOLAH
+     00000081  G$P0_1$0$0                         BEL_SEKOLAH
+     00000081  G$SP$0$0                           BEL_SEKOLAH
+     00000081  _P0_1                              BEL_SEKOLAH
+     00000081  _SP                                BEL_SEKOLAH
+     00000082  G$DPL$0$0                          BEL_SEKOLAH
+     00000082  G$P0_2$0$0                         BEL_SEKOLAH
+     00000082  _DPL                               BEL_SEKOLAH
+     00000082  _P0_2                              BEL_SEKOLAH
+     00000083  G$DPH$0$0                          BEL_SEKOLAH
+     00000083  G$P0_3$0$0                         BEL_SEKOLAH
+     00000083  _DPH                               BEL_SEKOLAH
+     00000083  _P0_3                              BEL_SEKOLAH
+     00000084  G$P0_4$0$0                         BEL_SEKOLAH
+     00000084  _P0_4                              BEL_SEKOLAH
+     00000085  G$P0_5$0$0                         BEL_SEKOLAH
+     00000085  _P0_5                              BEL_SEKOLAH
+     00000086  G$P0_6$0$0                         BEL_SEKOLAH
+     00000086  _P0_6                              BEL_SEKOLAH
+     00000087  G$P0_7$0$0                         BEL_SEKOLAH
+     00000087  G$PCON$0$0                         BEL_SEKOLAH
+     00000087  _P0_7                              BEL_SEKOLAH
+     00000087  _PCON                              BEL_SEKOLAH
+     00000088  G$IT0$0$0                          BEL_SEKOLAH
+     00000088  G$TCON$0$0                         BEL_SEKOLAH
+     00000088  _IT0                               BEL_SEKOLAH
+     00000088  _TCON                              BEL_SEKOLAH
+     00000089  G$IE0$0$0                          BEL_SEKOLAH
+     00000089  G$TMOD$0$0                         BEL_SEKOLAH
+     00000089  _IE0                               BEL_SEKOLAH
+     00000089  _TMOD                              BEL_SEKOLAH
+     0000008A  G$IT1$0$0                          BEL_SEKOLAH
+     0000008A  G$TL0$0$0                          BEL_SEKOLAH
+     0000008A  _IT1                               BEL_SEKOLAH
+     0000008A  _TL0                               BEL_SEKOLAH
+     0000008B  G$IE1$0$0                          BEL_SEKOLAH
+     0000008B  G$TL1$0$0                          BEL_SEKOLAH
+     0000008B  _IE1                               BEL_SEKOLAH
+     0000008B  _TL1                               BEL_SEKOLAH
+     0000008C  G$TH0$0$0                          BEL_SEKOLAH
+     0000008C  G$TR0$0$0                          BEL_SEKOLAH
+     0000008C  _TH0                               BEL_SEKOLAH
+     0000008C  _TR0                               BEL_SEKOLAH
+     0000008D  G$TF0$0$0                          BEL_SEKOLAH
+     0000008D  G$TH1$0$0                          BEL_SEKOLAH
+     0000008D  _TF0                               BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000008D  _TH1                               BEL_SEKOLAH
+     0000008E  G$TR1$0$0                          BEL_SEKOLAH
+     0000008E  _TR1                               BEL_SEKOLAH
+     0000008F  G$TF1$0$0                          BEL_SEKOLAH
+     0000008F  _TF1                               BEL_SEKOLAH
+     00000090  G$P1$0$0                           BEL_SEKOLAH
+     00000090  G$P1_0$0$0                         BEL_SEKOLAH
+     00000090  G$T2$0$0                           BEL_SEKOLAH
+     00000090  _P1                                BEL_SEKOLAH
+     00000090  _P1_0                              BEL_SEKOLAH
+     00000090  _T2                                BEL_SEKOLAH
+     00000091  G$P1_1$0$0                         BEL_SEKOLAH
+     00000091  G$T2EX$0$0                         BEL_SEKOLAH
+     00000091  _P1_1                              BEL_SEKOLAH
+     00000091  _T2EX                              BEL_SEKOLAH
+     00000092  G$P1_2$0$0                         BEL_SEKOLAH
+     00000092  _P1_2                              BEL_SEKOLAH
+     00000093  G$P1_3$0$0                         BEL_SEKOLAH
+     00000093  _P1_3                              BEL_SEKOLAH
+     00000094  G$P1_4$0$0                         BEL_SEKOLAH
+     00000094  _P1_4                              BEL_SEKOLAH
+     00000095  G$P1_5$0$0                         BEL_SEKOLAH
+     00000095  _P1_5                              BEL_SEKOLAH
+     00000096  G$P1_6$0$0                         BEL_SEKOLAH
+     00000096  _P1_6                              BEL_SEKOLAH
+     00000097  G$P1_7$0$0                         BEL_SEKOLAH
+     00000097  _P1_7                              BEL_SEKOLAH
+     00000098  G$RI$0$0                           BEL_SEKOLAH
+     00000098  G$SCON$0$0                         BEL_SEKOLAH
+     00000098  _RI                                BEL_SEKOLAH
+     00000098  _SCON                              BEL_SEKOLAH
+     00000099  G$SBUF$0$0                         BEL_SEKOLAH
+     00000099  G$TI$0$0                           BEL_SEKOLAH
+     00000099  _SBUF                              BEL_SEKOLAH
+     00000099  _TI                                BEL_SEKOLAH
+     0000009A  G$RB8$0$0                          BEL_SEKOLAH
+     0000009A  _RB8                               BEL_SEKOLAH
+     0000009B  G$TB8$0$0                          BEL_SEKOLAH
+     0000009B  _TB8                               BEL_SEKOLAH
+     0000009C  G$REN$0$0                          BEL_SEKOLAH
+     0000009C  _REN                               BEL_SEKOLAH
+     0000009D  G$SM2$0$0                          BEL_SEKOLAH
+     0000009D  _SM2                               BEL_SEKOLAH
+     0000009E  G$SM1$0$0                          BEL_SEKOLAH
+     0000009E  _SM1                               BEL_SEKOLAH
+     0000009F  G$SM0$0$0                          BEL_SEKOLAH
+     0000009F  _SM0                               BEL_SEKOLAH
+     000000A0  G$P2$0$0                           BEL_SEKOLAH
+     000000A0  G$P2_0$0$0                         BEL_SEKOLAH
+     000000A0  _P2                                BEL_SEKOLAH
+     000000A0  _P2_0                              BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000A0  __XPAGE                            
+     000000A1  G$P2_1$0$0                         BEL_SEKOLAH
+     000000A1  _P2_1                              BEL_SEKOLAH
+     000000A2  G$P2_2$0$0                         BEL_SEKOLAH
+     000000A2  _P2_2                              BEL_SEKOLAH
+     000000A3  G$P2_3$0$0                         BEL_SEKOLAH
+     000000A3  _P2_3                              BEL_SEKOLAH
+     000000A4  G$P2_4$0$0                         BEL_SEKOLAH
+     000000A4  _P2_4                              BEL_SEKOLAH
+     000000A5  G$P2_5$0$0                         BEL_SEKOLAH
+     000000A5  _P2_5                              BEL_SEKOLAH
+     000000A6  G$P2_6$0$0                         BEL_SEKOLAH
+     000000A6  _P2_6                              BEL_SEKOLAH
+     000000A7  G$P2_7$0$0                         BEL_SEKOLAH
+     000000A7  _P2_7                              BEL_SEKOLAH
+     000000A8  G$EX0$0$0                          BEL_SEKOLAH
+     000000A8  G$IE$0$0                           BEL_SEKOLAH
+     000000A8  _EX0                               BEL_SEKOLAH
+     000000A8  _IE                                BEL_SEKOLAH
+     000000A9  G$ET0$0$0                          BEL_SEKOLAH
+     000000A9  _ET0                               BEL_SEKOLAH
+     000000AA  G$EX1$0$0                          BEL_SEKOLAH
+     000000AA  _EX1                               BEL_SEKOLAH
+     000000AB  G$ET1$0$0                          BEL_SEKOLAH
+     000000AB  _ET1                               BEL_SEKOLAH
+     000000AC  G$ES$0$0                           BEL_SEKOLAH
+     000000AC  _ES                                BEL_SEKOLAH
+     000000AD  G$ET2$0$0                          BEL_SEKOLAH
+     000000AD  _ET2                               BEL_SEKOLAH
+     000000AF  G$EA$0$0                           BEL_SEKOLAH
+     000000AF  _EA                                BEL_SEKOLAH
+     000000B0  G$P3$0$0                           BEL_SEKOLAH
+     000000B0  G$P3_0$0$0                         BEL_SEKOLAH
+     000000B0  G$RXD$0$0                          BEL_SEKOLAH
+     000000B0  _P3                                BEL_SEKOLAH
+     000000B0  _P3_0                              BEL_SEKOLAH
+     000000B0  _RXD                               BEL_SEKOLAH
+     000000B1  G$P3_1$0$0                         BEL_SEKOLAH
+     000000B1  G$TXD$0$0                          BEL_SEKOLAH
+     000000B1  _P3_1                              BEL_SEKOLAH
+     000000B1  _TXD                               BEL_SEKOLAH
+     000000B2  G$INT0$0$0                         BEL_SEKOLAH
+     000000B2  G$P3_2$0$0                         BEL_SEKOLAH
+     000000B2  _INT0                              BEL_SEKOLAH
+     000000B2  _P3_2                              BEL_SEKOLAH
+     000000B3  G$INT1$0$0                         BEL_SEKOLAH
+     000000B3  G$P3_3$0$0                         BEL_SEKOLAH
+     000000B3  _INT1                              BEL_SEKOLAH
+     000000B3  _P3_3                              BEL_SEKOLAH
+     000000B4  G$P3_4$0$0                         BEL_SEKOLAH
+     000000B4  G$T0$0$0                           BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B4  _P3_4                              BEL_SEKOLAH
+     000000B4  _T0                                BEL_SEKOLAH
+     000000B5  G$P3_5$0$0                         BEL_SEKOLAH
+     000000B5  G$T1$0$0                           BEL_SEKOLAH
+     000000B5  _P3_5                              BEL_SEKOLAH
+     000000B5  _T1                                BEL_SEKOLAH
+     000000B6  G$P3_6$0$0                         BEL_SEKOLAH
+     000000B6  G$WR$0$0                           BEL_SEKOLAH
+     000000B6  _P3_6                              BEL_SEKOLAH
+     000000B6  _WR                                BEL_SEKOLAH
+     000000B7  G$P3_7$0$0                         BEL_SEKOLAH
+     000000B7  G$RD$0$0                           BEL_SEKOLAH
+     000000B7  _P3_7                              BEL_SEKOLAH
+     000000B7  _RD                                BEL_SEKOLAH
+     000000B8  G$IP$0$0                           BEL_SEKOLAH
+     000000B8  G$PX0$0$0                          BEL_SEKOLAH
+     000000B8  _IP                                BEL_SEKOLAH
+     000000B8  _PX0                               BEL_SEKOLAH
+     000000B9  G$PT0$0$0                          BEL_SEKOLAH
+     000000B9  _PT0                               BEL_SEKOLAH
+     000000BA  G$PX1$0$0                          BEL_SEKOLAH
+     000000BA  _PX1                               BEL_SEKOLAH
+     000000BB  G$PT1$0$0                          BEL_SEKOLAH
+     000000BB  _PT1                               BEL_SEKOLAH
+     000000BC  G$PS$0$0                           BEL_SEKOLAH
+     000000BC  _PS                                BEL_SEKOLAH
+     000000BD  G$PT2$0$0                          BEL_SEKOLAH
+     000000BD  _PT2                               BEL_SEKOLAH
+     000000C8  G$CP_RL2$0$0                       BEL_SEKOLAH
+     000000C8  G$T2CON$0$0                        BEL_SEKOLAH
+     000000C8  G$T2CON_0$0$0                      BEL_SEKOLAH
+     000000C8  _CP_RL2                            BEL_SEKOLAH
+     000000C8  _T2CON                             BEL_SEKOLAH
+     000000C8  _T2CON_0                           BEL_SEKOLAH
+     000000C9  G$C_T2$0$0                         BEL_SEKOLAH
+     000000C9  G$T2CON_1$0$0                      BEL_SEKOLAH
+     000000C9  G$T2MOD$0$0                        BEL_SEKOLAH
+     000000C9  _C_T2                              BEL_SEKOLAH
+     000000C9  _T2CON_1                           BEL_SEKOLAH
+     000000C9  _T2MOD                             BEL_SEKOLAH
+     000000CA  G$RCAP2L$0$0                       BEL_SEKOLAH
+     000000CA  G$T2CON_2$0$0                      BEL_SEKOLAH
+     000000CA  G$TR2$0$0                          BEL_SEKOLAH
+     000000CA  _RCAP2L                            BEL_SEKOLAH
+     000000CA  _T2CON_2                           BEL_SEKOLAH
+     000000CA  _TR2                               BEL_SEKOLAH
+     000000CB  G$EXEN2$0$0                        BEL_SEKOLAH
+     000000CB  G$RCAP2H$0$0                       BEL_SEKOLAH
+     000000CB  G$T2CON_3$0$0                      BEL_SEKOLAH
+     000000CB  _EXEN2                             BEL_SEKOLAH
+     000000CB  _RCAP2H                            BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000CB  _T2CON_3                           BEL_SEKOLAH
+     000000CC  G$T2CON_4$0$0                      BEL_SEKOLAH
+     000000CC  G$TCLK$0$0                         BEL_SEKOLAH
+     000000CC  G$TL2$0$0                          BEL_SEKOLAH
+     000000CC  _T2CON_4                           BEL_SEKOLAH
+     000000CC  _TCLK                              BEL_SEKOLAH
+     000000CC  _TL2                               BEL_SEKOLAH
+     000000CD  G$RCLK$0$0                         BEL_SEKOLAH
+     000000CD  G$T2CON_5$0$0                      BEL_SEKOLAH
+     000000CD  G$TH2$0$0                          BEL_SEKOLAH
+     000000CD  _RCLK                              BEL_SEKOLAH
+     000000CD  _T2CON_5                           BEL_SEKOLAH
+     000000CD  _TH2                               BEL_SEKOLAH
+     000000CE  G$EXF2$0$0                         BEL_SEKOLAH
+     000000CE  G$T2CON_6$0$0                      BEL_SEKOLAH
+     000000CE  _EXF2                              BEL_SEKOLAH
+     000000CE  _T2CON_6                           BEL_SEKOLAH
+     000000CF  G$T2CON_7$0$0                      BEL_SEKOLAH
+     000000CF  G$TF2$0$0                          BEL_SEKOLAH
+     000000CF  _T2CON_7                           BEL_SEKOLAH
+     000000CF  _TF2                               BEL_SEKOLAH
+     000000D0  G$P$0$0                            BEL_SEKOLAH
+     000000D0  G$PSW$0$0                          BEL_SEKOLAH
+     000000D0  _P                                 BEL_SEKOLAH
+     000000D0  _PSW                               BEL_SEKOLAH
+     000000D1  G$FL$0$0                           BEL_SEKOLAH
+     000000D1  _FL                                BEL_SEKOLAH
+     000000D2  G$OV$0$0                           BEL_SEKOLAH
+     000000D2  _OV                                BEL_SEKOLAH
+     000000D3  G$RS0$0$0                          BEL_SEKOLAH
+     000000D3  _RS0                               BEL_SEKOLAH
+     000000D4  G$RS1$0$0                          BEL_SEKOLAH
+     000000D4  _RS1                               BEL_SEKOLAH
+     000000D5  G$F0$0$0                           BEL_SEKOLAH
+     000000D5  _F0                                BEL_SEKOLAH
+     000000D6  G$AC$0$0                           BEL_SEKOLAH
+     000000D6  _AC                                BEL_SEKOLAH
+     000000D7  G$CY$0$0                           BEL_SEKOLAH
+     000000D7  _CY                                BEL_SEKOLAH
+     000000E0  G$A$0$0                            BEL_SEKOLAH
+     000000E0  G$ACC$0$0                          BEL_SEKOLAH
+     000000E0  _A                                 BEL_SEKOLAH
+     000000E0  _ACC                               BEL_SEKOLAH
+     000000F0  G$B$0$0                            BEL_SEKOLAH
+     000000F0  _B                                 BEL_SEKOLAH
+     000000F5  _B_5                               _gptrget
+     000000F6  _B_6                               _gptrget
+     000000F7  _B_7                               _gptrget
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+BSEG_BYTES                          00000020    00000001 =           1. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    0000007A =         122. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  G$send_buf$0$0                     BEL_SEKOLAH
+     00000008  _send_buf                          BEL_SEKOLAH
+     00000012  LBEL_SEKOLAH.fill_uint16_bigend$   BEL_SEKOLAH
+     00000014  LBEL_SEKOLAH.mp3_get_checksum$th   BEL_SEKOLAH
+     00000017  LBEL_SEKOLAH.mp3_send_cmd$arg$1$   BEL_SEKOLAH
+     00000017  _mp3_send_cmd_PARM_2               BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+OSEG                                00000019    00000001 =           1. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000019  __gptrput_PARM_2                   _gptrput
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000021    000000DF =         223. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000021  __start__stack                     BEL_SEKOLAH
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000006 =           6. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  A$BEL_SEKOLAH$545                  BEL_SEKOLAH
+C:   00000003  A$BEL_SEKOLAH$582                  BEL_SEKOLAH
+C:   00000003  __sdcc_program_startup             BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000006    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000006  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000009    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000013    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000013  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000035    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000035  __mcs51_genRAMCLEAR                
+C:   0000003B  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              0000005F    00000020 =          32. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000005F  A$BEL_SEKOLAH$561                  BEL_SEKOLAH
+C:   0000005F  C$dfplayer_mini_mp3.h$63$1$95      BEL_SEKOLAH
+C:   00000062  A$BEL_SEKOLAH$562                  BEL_SEKOLAH
+C:   00000065  A$BEL_SEKOLAH$563                  BEL_SEKOLAH
+C:   00000068  A$BEL_SEKOLAH$564                  BEL_SEKOLAH
+C:   0000006B  A$BEL_SEKOLAH$565                  BEL_SEKOLAH
+C:   0000006E  A$BEL_SEKOLAH$566                  BEL_SEKOLAH
+C:   00000071  A$BEL_SEKOLAH$567                  BEL_SEKOLAH
+C:   00000074  A$BEL_SEKOLAH$568                  BEL_SEKOLAH
+C:   00000077  A$BEL_SEKOLAH$569                  BEL_SEKOLAH
+C:   0000007A  A$BEL_SEKOLAH$570                  BEL_SEKOLAH
+C:   0000007D  A$BEL_SEKOLAH$573                  BEL_SEKOLAH
+C:   0000007D  C$dfplayer_mini_mp3.h$65$1$95      BEL_SEKOLAH
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             0000007F    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000007F  A$BEL_SEKOLAH$575                  BEL_SEKOLAH
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000082  A$BEL_SEKOLAH$608                  BEL_SEKOLAH
+C:   00000082  C$i2c.h$15$0$0                     BEL_SEKOLAH
+C:   00000082  C$i2c.h$19$1$2                     BEL_SEKOLAH
+C:   00000082  G$I2C_delay$0$0                    BEL_SEKOLAH
+C:   00000082  _I2C_delay                         BEL_SEKOLAH
+C:   00000083  A$BEL_SEKOLAH$612                  BEL_SEKOLAH
+C:   00000083  C$i2c.h$20$1$2                     BEL_SEKOLAH
+C:   00000083  XG$I2C_delay$0$0                   BEL_SEKOLAH
+C:   00000084  A$BEL_SEKOLAH$625                  BEL_SEKOLAH
+C:   00000084  C$i2c.h$21$1$2                     BEL_SEKOLAH
+C:   00000084  C$i2c.h$22$1$4                     BEL_SEKOLAH
+C:   00000084  G$I2C_clock$0$0                    BEL_SEKOLAH
+C:   00000084  _I2C_clock                         BEL_SEKOLAH
+C:   00000087  A$BEL_SEKOLAH$628                  BEL_SEKOLAH
+C:   00000087  C$i2c.h$23$1$4                     BEL_SEKOLAH
+C:   00000089  A$BEL_SEKOLAH$631                  BEL_SEKOLAH
+C:   00000089  C$i2c.h$24$1$4                     BEL_SEKOLAH
+C:   0000008C  A$BEL_SEKOLAH$634                  BEL_SEKOLAH
+C:   0000008C  C$i2c.h$25$1$4                     BEL_SEKOLAH
+C:   0000008E  A$BEL_SEKOLAH$637                  BEL_SEKOLAH
+C:   0000008E  C$i2c.h$26$1$4                     BEL_SEKOLAH
+C:   0000008E  XG$I2C_clock$0$0                   BEL_SEKOLAH
+C:   0000008F  A$BEL_SEKOLAH$652                  BEL_SEKOLAH
+C:   0000008F  C$i2c.h$27$1$4                     BEL_SEKOLAH
+C:   0000008F  C$i2c.h$28$1$6                     BEL_SEKOLAH
+C:   0000008F  C$i2c.h$29$1$6                     BEL_SEKOLAH
+C:   0000008F  G$I2C_start$0$0                    BEL_SEKOLAH
+C:   0000008F  _I2C_start                         BEL_SEKOLAH
+C:   00000092  A$BEL_SEKOLAH$653                  BEL_SEKOLAH
+C:   00000094  A$BEL_SEKOLAH$658                  BEL_SEKOLAH
+C:   00000094  C$i2c.h$30$1$6                     BEL_SEKOLAH
+C:   00000096  A$BEL_SEKOLAH$661                  BEL_SEKOLAH
+C:   00000096  C$i2c.h$31$1$6                     BEL_SEKOLAH
+C:   00000098  A$BEL_SEKOLAH$664                  BEL_SEKOLAH
+C:   00000098  C$i2c.h$32$1$6                     BEL_SEKOLAH
+C:   0000009B  A$BEL_SEKOLAH$667                  BEL_SEKOLAH
+C:   0000009B  C$i2c.h$33$1$6                     BEL_SEKOLAH
+C:   0000009D  A$BEL_SEKOLAH$670                  BEL_SEKOLAH
+C:   0000009D  C$i2c.h$34$1$6                     BEL_SEKOLAH
+C:   000000A0  A$BEL_SEKOLAH$673                  BEL_SEKOLAH
+C:   000000A0  C$i2c.h$35$1$6                     BEL_SEKOLAH
+C:   000000A2  A$BEL_SEKOLAH$676                  BEL_SEKOLAH
+C:   000000A2  C$i2c.h$36$1$6                     BEL_SEKOLAH
+C:   000000A2  XG$I2C_start$0$0                   BEL_SEKOLAH
+C:   000000A3  A$BEL_SEKOLAH$691                  BEL_SEKOLAH
+C:   000000A3  C$i2c.h$37$1$6                     BEL_SEKOLAH
+C:   000000A3  C$i2c.h$38$1$8                     BEL_SEKOLAH
+C:   000000A3  C$i2c.h$39$1$8                     BEL_SEKOLAH
+C:   000000A3  G$I2C_stop$0$0                     BEL_SEKOLAH
+C:   000000A3  _I2C_stop                          BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000A6  A$BEL_SEKOLAH$692                  BEL_SEKOLAH
+C:   000000A8  A$BEL_SEKOLAH$697                  BEL_SEKOLAH
+C:   000000A8  C$i2c.h$40$1$8                     BEL_SEKOLAH
+C:   000000AA  A$BEL_SEKOLAH$700                  BEL_SEKOLAH
+C:   000000AA  C$i2c.h$41$1$8                     BEL_SEKOLAH
+C:   000000AD  A$BEL_SEKOLAH$703                  BEL_SEKOLAH
+C:   000000AD  C$i2c.h$42$1$8                     BEL_SEKOLAH
+C:   000000AF  A$BEL_SEKOLAH$706                  BEL_SEKOLAH
+C:   000000AF  C$i2c.h$43$1$8                     BEL_SEKOLAH
+C:   000000B2  A$BEL_SEKOLAH$709                  BEL_SEKOLAH
+C:   000000B2  C$i2c.h$44$1$8                     BEL_SEKOLAH
+C:   000000B4  A$BEL_SEKOLAH$712                  BEL_SEKOLAH
+C:   000000B4  C$i2c.h$45$1$8                     BEL_SEKOLAH
+C:   000000B4  XG$I2C_stop$0$0                    BEL_SEKOLAH
+C:   000000B5  A$BEL_SEKOLAH$726                  BEL_SEKOLAH
+C:   000000B5  C$i2c.h$46$1$8                     BEL_SEKOLAH
+C:   000000B5  G$I2C_write$0$0                    BEL_SEKOLAH
+C:   000000B5  _I2C_write                         BEL_SEKOLAH
+C:   000000B7  A$BEL_SEKOLAH$729                  BEL_SEKOLAH
+C:   000000B9  A$BEL_SEKOLAH$733                  BEL_SEKOLAH
+C:   000000B9  C$i2c.h$51$2$11                    BEL_SEKOLAH
+C:   000000BA  A$BEL_SEKOLAH$734                  BEL_SEKOLAH
+C:   000000BB  A$BEL_SEKOLAH$735                  BEL_SEKOLAH
+C:   000000BD  A$BEL_SEKOLAH$738                  BEL_SEKOLAH
+C:   000000BD  C$i2c.h$53$2$11                    BEL_SEKOLAH
+C:   000000BF  A$BEL_SEKOLAH$739                  BEL_SEKOLAH
+C:   000000C1  A$BEL_SEKOLAH$740                  BEL_SEKOLAH
+C:   000000C4  A$BEL_SEKOLAH$741                  BEL_SEKOLAH
+C:   000000C6  A$BEL_SEKOLAH$742                  BEL_SEKOLAH
+C:   000000C8  A$BEL_SEKOLAH$745                  BEL_SEKOLAH
+C:   000000C8  C$i2c.h$54$2$11                    BEL_SEKOLAH
+C:   000000C9  A$BEL_SEKOLAH$746                  BEL_SEKOLAH
+C:   000000CA  A$BEL_SEKOLAH$747                  BEL_SEKOLAH
+C:   000000CB  A$BEL_SEKOLAH$750                  BEL_SEKOLAH
+C:   000000CB  C$i2c.h$49$1$10                    BEL_SEKOLAH
+C:   000000CC  A$BEL_SEKOLAH$751                  BEL_SEKOLAH
+C:   000000CF  A$BEL_SEKOLAH$753                  BEL_SEKOLAH
+C:   000000D1  A$BEL_SEKOLAH$756                  BEL_SEKOLAH
+C:   000000D1  C$i2c.h$56$1$10                    BEL_SEKOLAH
+C:   000000D3  A$BEL_SEKOLAH$759                  BEL_SEKOLAH
+C:   000000D3  C$i2c.h$57$1$10                    BEL_SEKOLAH
+C:   000000D6  A$BEL_SEKOLAH$762                  BEL_SEKOLAH
+C:   000000D6  C$i2c.h$58$1$10                    BEL_SEKOLAH
+C:   000000D8  A$BEL_SEKOLAH$765                  BEL_SEKOLAH
+C:   000000D8  C$i2c.h$59$1$10                    BEL_SEKOLAH
+C:   000000DB  A$BEL_SEKOLAH$768                  BEL_SEKOLAH
+C:   000000DB  C$i2c.h$60$1$10                    BEL_SEKOLAH
+C:   000000DD  A$BEL_SEKOLAH$771                  BEL_SEKOLAH
+C:   000000DD  C$i2c.h$61$1$10                    BEL_SEKOLAH
+C:   000000DF  A$BEL_SEKOLAH$774                  BEL_SEKOLAH
+C:   000000DF  C$i2c.h$62$1$10                    BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000E2  A$BEL_SEKOLAH$777                  BEL_SEKOLAH
+C:   000000E2  C$i2c.h$63$1$10                    BEL_SEKOLAH
+C:   000000E2  XG$I2C_write$0$0                   BEL_SEKOLAH
+C:   000000E3  A$BEL_SEKOLAH$793                  BEL_SEKOLAH
+C:   000000E3  C$i2c.h$64$1$10                    BEL_SEKOLAH
+C:   000000E3  C$i2c.h$67$1$13                    BEL_SEKOLAH
+C:   000000E3  G$I2C_read$0$0                     BEL_SEKOLAH
+C:   000000E3  _I2C_read                          BEL_SEKOLAH
+C:   000000E5  A$BEL_SEKOLAH$796                  BEL_SEKOLAH
+C:   000000E7  A$BEL_SEKOLAH$800                  BEL_SEKOLAH
+C:   000000E7  C$i2c.h$70$2$14                    BEL_SEKOLAH
+C:   000000E9  A$BEL_SEKOLAH$801                  BEL_SEKOLAH
+C:   000000EB  A$BEL_SEKOLAH$802                  BEL_SEKOLAH
+C:   000000EE  A$BEL_SEKOLAH$805                  BEL_SEKOLAH
+C:   000000EE  C$i2c.h$71$2$14                    BEL_SEKOLAH
+C:   000000F0  A$BEL_SEKOLAH$808                  BEL_SEKOLAH
+C:   000000F0  C$i2c.h$72$2$14                    BEL_SEKOLAH
+C:   000000F3  A$BEL_SEKOLAH$809                  BEL_SEKOLAH
+C:   000000F5  A$BEL_SEKOLAH$810                  BEL_SEKOLAH
+C:   000000F7  A$BEL_SEKOLAH$813                  BEL_SEKOLAH
+C:   000000F7  C$i2c.h$73$2$14                    BEL_SEKOLAH
+C:   000000F9  A$BEL_SEKOLAH$814                  BEL_SEKOLAH
+C:   000000FB  A$BEL_SEKOLAH$817                  BEL_SEKOLAH
+C:   000000FB  C$i2c.h$74$2$14                    BEL_SEKOLAH
+C:   000000FC  A$BEL_SEKOLAH$818                  BEL_SEKOLAH
+C:   000000FD  A$BEL_SEKOLAH$821                  BEL_SEKOLAH
+C:   000000FD  C$i2c.h$75$2$14                    BEL_SEKOLAH
+C:   000000FE  A$BEL_SEKOLAH$822                  BEL_SEKOLAH
+C:   00000100  A$BEL_SEKOLAH$823                  BEL_SEKOLAH
+C:   00000101  A$BEL_SEKOLAH$824                  BEL_SEKOLAH
+C:   00000102  A$BEL_SEKOLAH$825                  BEL_SEKOLAH
+C:   00000103  A$BEL_SEKOLAH$826                  BEL_SEKOLAH
+C:   00000104  A$BEL_SEKOLAH$827                  BEL_SEKOLAH
+C:   00000105  A$BEL_SEKOLAH$830                  BEL_SEKOLAH
+C:   00000105  C$i2c.h$76$2$14                    BEL_SEKOLAH
+C:   00000107  A$BEL_SEKOLAH$833                  BEL_SEKOLAH
+C:   00000107  C$i2c.h$68$1$13                    BEL_SEKOLAH
+C:   00000108  A$BEL_SEKOLAH$834                  BEL_SEKOLAH
+C:   0000010B  A$BEL_SEKOLAH$836                  BEL_SEKOLAH
+C:   0000010D  A$BEL_SEKOLAH$839                  BEL_SEKOLAH
+C:   0000010D  C$i2c.h$78$1$13                    BEL_SEKOLAH
+C:   0000010F  A$BEL_SEKOLAH$842                  BEL_SEKOLAH
+C:   0000010F  C$i2c.h$79$1$13                    BEL_SEKOLAH
+C:   0000010F  XG$I2C_read$0$0                    BEL_SEKOLAH
+C:   00000110  A$BEL_SEKOLAH$855                  BEL_SEKOLAH
+C:   00000110  C$i2c.h$80$1$13                    BEL_SEKOLAH
+C:   00000110  C$i2c.h$82$1$15                    BEL_SEKOLAH
+C:   00000110  G$I2C_ack$0$0                      BEL_SEKOLAH
+C:   00000110  _I2C_ack                           BEL_SEKOLAH
+C:   00000112  A$BEL_SEKOLAH$858                  BEL_SEKOLAH
+C:   00000112  C$i2c.h$83$1$15                    BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000115  A$BEL_SEKOLAH$861                  BEL_SEKOLAH
+C:   00000115  C$i2c.h$84$1$15                    BEL_SEKOLAH
+C:   00000118  A$BEL_SEKOLAH$864                  BEL_SEKOLAH
+C:   00000118  C$i2c.h$85$1$15                    BEL_SEKOLAH
+C:   0000011A  A$BEL_SEKOLAH$867                  BEL_SEKOLAH
+C:   0000011A  C$i2c.h$86$1$15                    BEL_SEKOLAH
+C:   0000011A  XG$I2C_ack$0$0                     BEL_SEKOLAH
+C:   0000011B  A$BEL_SEKOLAH$880                  BEL_SEKOLAH
+C:   0000011B  C$i2c.h$87$1$15                    BEL_SEKOLAH
+C:   0000011B  C$i2c.h$89$1$16                    BEL_SEKOLAH
+C:   0000011B  G$I2C_nack$0$0                     BEL_SEKOLAH
+C:   0000011B  _I2C_nack                          BEL_SEKOLAH
+C:   0000011D  A$BEL_SEKOLAH$883                  BEL_SEKOLAH
+C:   0000011D  C$i2c.h$90$1$16                    BEL_SEKOLAH
+C:   00000120  A$BEL_SEKOLAH$886                  BEL_SEKOLAH
+C:   00000120  C$i2c.h$91$1$16                    BEL_SEKOLAH
+C:   00000123  A$BEL_SEKOLAH$889                  BEL_SEKOLAH
+C:   00000123  C$i2c.h$92$1$16                    BEL_SEKOLAH
+C:   00000125  A$BEL_SEKOLAH$892                  BEL_SEKOLAH
+C:   00000125  C$i2c.h$93$1$16                    BEL_SEKOLAH
+C:   00000125  XG$I2C_nack$0$0                    BEL_SEKOLAH
+C:   00000126  A$BEL_SEKOLAH$908                  BEL_SEKOLAH
+C:   00000126  C$dfplayer_mini_mp3.h$2$1$16       BEL_SEKOLAH
+C:   00000126  C$dfplayer_mini_mp3.h$3$1$18       BEL_SEKOLAH
+C:   00000126  C$dfplayer_mini_mp3.h$4$1$18       BEL_SEKOLAH
+C:   00000126  G$USART_receive$0$0                BEL_SEKOLAH
+C:   00000126  _USART_receive                     BEL_SEKOLAH
+C:   00000129  A$BEL_SEKOLAH$909                  BEL_SEKOLAH
+C:   0000012B  A$BEL_SEKOLAH$913                  BEL_SEKOLAH
+C:   0000012B  C$dfplayer_mini_mp3.h$5$1$18       BEL_SEKOLAH
+C:   0000012E  A$BEL_SEKOLAH$916                  BEL_SEKOLAH
+C:   0000012E  C$dfplayer_mini_mp3.h$6$1$18       BEL_SEKOLAH
+C:   0000012E  XG$USART_receive$0$0               BEL_SEKOLAH
+C:   0000012F  A$BEL_SEKOLAH$929                  BEL_SEKOLAH
+C:   0000012F  C$dfplayer_mini_mp3.h$8$1$18       BEL_SEKOLAH
+C:   0000012F  G$USART_send$0$0                   BEL_SEKOLAH
+C:   0000012F  _USART_send                        BEL_SEKOLAH
+C:   00000132  A$BEL_SEKOLAH$935                  BEL_SEKOLAH
+C:   00000132  C$dfplayer_mini_mp3.h$10$1$20      BEL_SEKOLAH
+C:   00000132  C$dfplayer_mini_mp3.h$11$1$20      BEL_SEKOLAH
+C:   00000135  A$BEL_SEKOLAH$936                  BEL_SEKOLAH
+C:   00000137  A$BEL_SEKOLAH$940                  BEL_SEKOLAH
+C:   00000137  C$dfplayer_mini_mp3.h$12$1$20      BEL_SEKOLAH
+C:   00000137  XG$USART_send$0$0                  BEL_SEKOLAH
+C:   00000138  A$BEL_SEKOLAH$953                  BEL_SEKOLAH
+C:   00000138  C$dfplayer_mini_mp3.h$53$1$20      BEL_SEKOLAH
+C:   00000138  G$USART_putstring$0$0              BEL_SEKOLAH
+C:   00000138  _USART_putstring                   BEL_SEKOLAH
+C:   0000013A  A$BEL_SEKOLAH$954                  BEL_SEKOLAH
+C:   0000013C  A$BEL_SEKOLAH$955                  BEL_SEKOLAH
+C:   0000013E  A$BEL_SEKOLAH$959                  BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000013E  C$dfplayer_mini_mp3.h$54$1$22      BEL_SEKOLAH
+C:   00000140  A$BEL_SEKOLAH$960                  BEL_SEKOLAH
+C:   00000142  A$BEL_SEKOLAH$961                  BEL_SEKOLAH
+C:   00000144  A$BEL_SEKOLAH$962                  BEL_SEKOLAH
+C:   00000147  A$BEL_SEKOLAH$963                  BEL_SEKOLAH
+C:   00000148  A$BEL_SEKOLAH$964                  BEL_SEKOLAH
+C:   0000014A  A$BEL_SEKOLAH$967                  BEL_SEKOLAH
+C:   0000014A  C$dfplayer_mini_mp3.h$55$2$23      BEL_SEKOLAH
+C:   0000014C  A$BEL_SEKOLAH$968                  BEL_SEKOLAH
+C:   0000014E  A$BEL_SEKOLAH$969                  BEL_SEKOLAH
+C:   00000150  A$BEL_SEKOLAH$970                  BEL_SEKOLAH
+C:   00000152  A$BEL_SEKOLAH$971                  BEL_SEKOLAH
+C:   00000155  A$BEL_SEKOLAH$972                  BEL_SEKOLAH
+C:   00000157  A$BEL_SEKOLAH$973                  BEL_SEKOLAH
+C:   00000159  A$BEL_SEKOLAH$974                  BEL_SEKOLAH
+C:   0000015B  A$BEL_SEKOLAH$977                  BEL_SEKOLAH
+C:   0000015B  C$dfplayer_mini_mp3.h$56$2$23      BEL_SEKOLAH
+C:   0000015C  A$BEL_SEKOLAH$978                  BEL_SEKOLAH
+C:   0000015F  A$BEL_SEKOLAH$979                  BEL_SEKOLAH
+C:   00000160  A$BEL_SEKOLAH$980                  BEL_SEKOLAH
+C:   00000162  A$BEL_SEKOLAH$984                  BEL_SEKOLAH
+C:   00000162  C$dfplayer_mini_mp3.h$57$1$22      BEL_SEKOLAH
+C:   00000162  XG$USART_putstring$0$0             BEL_SEKOLAH
+C:   00000163  A$BEL_SEKOLAH$998                  BEL_SEKOLAH
+C:   00000163  C$delay.h$1$1$22                   BEL_SEKOLAH
+C:   00000163  G$delay$0$0                        BEL_SEKOLAH
+C:   00000163  _delay                             BEL_SEKOLAH
+C:   00000165  A$BEL_SEKOLAH$999                  BEL_SEKOLAH
+C:   00000167  A$BEL_SEKOLAH$1003                 BEL_SEKOLAH
+C:   00000168  A$BEL_SEKOLAH$1004                 BEL_SEKOLAH
+C:   00000169  A$BEL_SEKOLAH$1005                 BEL_SEKOLAH
+C:   0000016B  A$BEL_SEKOLAH$1008                 BEL_SEKOLAH
+C:   0000016B  C$delay.h$4$1$25                   BEL_SEKOLAH
+C:   0000016D  A$BEL_SEKOLAH$1010                 BEL_SEKOLAH
+C:   0000016F  A$BEL_SEKOLAH$1011                 BEL_SEKOLAH
+C:   00000170  A$BEL_SEKOLAH$1012                 BEL_SEKOLAH
+C:   00000171  A$BEL_SEKOLAH$1013                 BEL_SEKOLAH
+C:   00000172  A$BEL_SEKOLAH$1014                 BEL_SEKOLAH
+C:   00000174  A$BEL_SEKOLAH$1017                 BEL_SEKOLAH
+C:   00000174  C$delay.h$3$1$25                   BEL_SEKOLAH
+C:   00000175  A$BEL_SEKOLAH$1018                 BEL_SEKOLAH
+C:   00000178  A$BEL_SEKOLAH$1019                 BEL_SEKOLAH
+C:   00000179  A$BEL_SEKOLAH$1021                 BEL_SEKOLAH
+C:   0000017B  A$BEL_SEKOLAH$1025                 BEL_SEKOLAH
+C:   0000017B  C$delay.h$5$1$25                   BEL_SEKOLAH
+C:   0000017B  XG$delay$0$0                       BEL_SEKOLAH
+C:   0000017C  A$BEL_SEKOLAH$1038                 BEL_SEKOLAH
+C:   0000017C  C$dfplayer_mini_mp3.h$66$1$25      BEL_SEKOLAH
+C:   0000017C  C$dfplayer_mini_mp3.h$67$1$27      BEL_SEKOLAH
+C:   0000017C  G$mp3_set_reply$0$0                BEL_SEKOLAH
+C:   0000017C  _mp3_set_reply                     BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000017E  A$BEL_SEKOLAH$1041                 BEL_SEKOLAH
+C:   0000017E  C$dfplayer_mini_mp3.h$68$1$27      BEL_SEKOLAH
+C:   00000180  A$BEL_SEKOLAH$1042                 BEL_SEKOLAH
+C:   00000181  A$BEL_SEKOLAH$1043                 BEL_SEKOLAH
+C:   00000182  A$BEL_SEKOLAH$1044                 BEL_SEKOLAH
+C:   00000183  A$BEL_SEKOLAH$1045                 BEL_SEKOLAH
+C:   00000185  A$BEL_SEKOLAH$1048                 BEL_SEKOLAH
+C:   00000185  C$dfplayer_mini_mp3.h$69$1$27      BEL_SEKOLAH
+C:   00000185  XG$mp3_set_reply$0$0               BEL_SEKOLAH
+C:   00000186  A$BEL_SEKOLAH$1064                 BEL_SEKOLAH
+C:   00000186  C$dfplayer_mini_mp3.h$70$1$27      BEL_SEKOLAH
+C:   00000186  C$dfplayer_mini_mp3.h$71$1$29      BEL_SEKOLAH
+C:   00000186  FBEL_SEKOLAH$fill_uint16_bigend$   BEL_SEKOLAH
+C:   00000188  A$BEL_SEKOLAH$1065                 BEL_SEKOLAH
+C:   0000018A  A$BEL_SEKOLAH$1066                 BEL_SEKOLAH
+C:   0000018C  A$BEL_SEKOLAH$1067                 BEL_SEKOLAH
+C:   0000018E  A$BEL_SEKOLAH$1068                 BEL_SEKOLAH
+C:   0000018F  A$BEL_SEKOLAH$1069                 BEL_SEKOLAH
+C:   00000192  A$BEL_SEKOLAH$1072                 BEL_SEKOLAH
+C:   00000192  C$dfplayer_mini_mp3.h$72$1$29      BEL_SEKOLAH
+C:   00000193  A$BEL_SEKOLAH$1073                 BEL_SEKOLAH
+C:   00000196  A$BEL_SEKOLAH$1074                 BEL_SEKOLAH
+C:   00000197  A$BEL_SEKOLAH$1076                 BEL_SEKOLAH
+C:   00000199  A$BEL_SEKOLAH$1077                 BEL_SEKOLAH
+C:   0000019B  A$BEL_SEKOLAH$1078                 BEL_SEKOLAH
+C:   0000019D  A$BEL_SEKOLAH$1079                 BEL_SEKOLAH
+C:   0000019F  A$BEL_SEKOLAH$1080                 BEL_SEKOLAH
+C:   000001A0  A$BEL_SEKOLAH$1081                 BEL_SEKOLAH
+C:   000001A3  A$BEL_SEKOLAH$1084                 BEL_SEKOLAH
+C:   000001A3  C$dfplayer_mini_mp3.h$73$1$29      BEL_SEKOLAH
+C:   000001A3  XFBEL_SEKOLAH$fill_uint16_bigend   BEL_SEKOLAH
+C:   000001A4  A$BEL_SEKOLAH$1099                 BEL_SEKOLAH
+C:   000001A4  C$dfplayer_mini_mp3.h$75$1$29      BEL_SEKOLAH
+C:   000001A4  G$mp3_get_checksum$0$0             BEL_SEKOLAH
+C:   000001A4  _mp3_get_checksum                  BEL_SEKOLAH
+C:   000001A7  A$BEL_SEKOLAH$1100                 BEL_SEKOLAH
+C:   000001AA  A$BEL_SEKOLAH$1101                 BEL_SEKOLAH
+C:   000001AD  A$BEL_SEKOLAH$1104                 BEL_SEKOLAH
+C:   000001AD  C$dfplayer_mini_mp3.h$76$1$29      BEL_SEKOLAH
+C:   000001AF  A$BEL_SEKOLAH$1105                 BEL_SEKOLAH
+C:   000001B1  A$BEL_SEKOLAH$1108                 BEL_SEKOLAH
+C:   000001B3  A$BEL_SEKOLAH$1109                 BEL_SEKOLAH
+C:   000001B5  A$BEL_SEKOLAH$1113                 BEL_SEKOLAH
+C:   000001B5  C$dfplayer_mini_mp3.h$79$2$32      BEL_SEKOLAH
+C:   000001B6  A$BEL_SEKOLAH$1114                 BEL_SEKOLAH
+C:   000001B8  A$BEL_SEKOLAH$1115                 BEL_SEKOLAH
+C:   000001B9  A$BEL_SEKOLAH$1116                 BEL_SEKOLAH
+C:   000001BA  A$BEL_SEKOLAH$1117                 BEL_SEKOLAH
+C:   000001BC  A$BEL_SEKOLAH$1118                 BEL_SEKOLAH
+C:   000001BD  A$BEL_SEKOLAH$1119                 BEL_SEKOLAH
+C:   000001BF  A$BEL_SEKOLAH$1120                 BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001C1  A$BEL_SEKOLAH$1121                 BEL_SEKOLAH
+C:   000001C3  A$BEL_SEKOLAH$1122                 BEL_SEKOLAH
+C:   000001C5  A$BEL_SEKOLAH$1123                 BEL_SEKOLAH
+C:   000001C8  A$BEL_SEKOLAH$1124                 BEL_SEKOLAH
+C:   000001C9  A$BEL_SEKOLAH$1125                 BEL_SEKOLAH
+C:   000001CB  A$BEL_SEKOLAH$1126                 BEL_SEKOLAH
+C:   000001CC  A$BEL_SEKOLAH$1127                 BEL_SEKOLAH
+C:   000001CD  A$BEL_SEKOLAH$1128                 BEL_SEKOLAH
+C:   000001CE  A$BEL_SEKOLAH$1129                 BEL_SEKOLAH
+C:   000001CF  A$BEL_SEKOLAH$1130                 BEL_SEKOLAH
+C:   000001D0  A$BEL_SEKOLAH$1133                 BEL_SEKOLAH
+C:   000001D0  C$dfplayer_mini_mp3.h$78$1$31      BEL_SEKOLAH
+C:   000001D1  A$BEL_SEKOLAH$1134                 BEL_SEKOLAH
+C:   000001D4  A$BEL_SEKOLAH$1135                 BEL_SEKOLAH
+C:   000001D5  A$BEL_SEKOLAH$1137                 BEL_SEKOLAH
+C:   000001D6  A$BEL_SEKOLAH$1138                 BEL_SEKOLAH
+C:   000001D7  A$BEL_SEKOLAH$1139                 BEL_SEKOLAH
+C:   000001D9  A$BEL_SEKOLAH$1140                 BEL_SEKOLAH
+C:   000001DA  A$BEL_SEKOLAH$1141                 BEL_SEKOLAH
+C:   000001DC  A$BEL_SEKOLAH$1142                 BEL_SEKOLAH
+C:   000001DE  A$BEL_SEKOLAH$1145                 BEL_SEKOLAH
+C:   000001DE  C$dfplayer_mini_mp3.h$81$1$31      BEL_SEKOLAH
+C:   000001E0  A$BEL_SEKOLAH$1146                 BEL_SEKOLAH
+C:   000001E1  A$BEL_SEKOLAH$1147                 BEL_SEKOLAH
+C:   000001E2  A$BEL_SEKOLAH$1148                 BEL_SEKOLAH
+C:   000001E4  A$BEL_SEKOLAH$1149                 BEL_SEKOLAH
+C:   000001E5  A$BEL_SEKOLAH$1150                 BEL_SEKOLAH
+C:   000001E6  A$BEL_SEKOLAH$1151                 BEL_SEKOLAH
+C:   000001E8  A$BEL_SEKOLAH$1154                 BEL_SEKOLAH
+C:   000001E8  C$dfplayer_mini_mp3.h$82$1$31      BEL_SEKOLAH
+C:   000001E8  XG$mp3_get_checksum$0$0            BEL_SEKOLAH
+C:   000001E9  A$BEL_SEKOLAH$1169                 BEL_SEKOLAH
+C:   000001E9  C$dfplayer_mini_mp3.h$84$1$31      BEL_SEKOLAH
+C:   000001E9  C$dfplayer_mini_mp3.h$85$1$33      BEL_SEKOLAH
+C:   000001E9  G$mp3_fill_checksum$0$0            BEL_SEKOLAH
+C:   000001E9  _mp3_fill_checksum                 BEL_SEKOLAH
+C:   000001EC  A$BEL_SEKOLAH$1170                 BEL_SEKOLAH
+C:   000001EF  A$BEL_SEKOLAH$1171                 BEL_SEKOLAH
+C:   000001F2  A$BEL_SEKOLAH$1172                 BEL_SEKOLAH
+C:   000001F5  A$BEL_SEKOLAH$1173                 BEL_SEKOLAH
+C:   000001F8  A$BEL_SEKOLAH$1176                 BEL_SEKOLAH
+C:   000001F8  C$dfplayer_mini_mp3.h$86$1$33      BEL_SEKOLAH
+C:   000001FB  A$BEL_SEKOLAH$1177                 BEL_SEKOLAH
+C:   000001FE  A$BEL_SEKOLAH$1178                 BEL_SEKOLAH
+C:   00000201  A$BEL_SEKOLAH$1181                 BEL_SEKOLAH
+C:   00000201  C$dfplayer_mini_mp3.h$87$1$33      BEL_SEKOLAH
+C:   00000201  XG$mp3_fill_checksum$0$0           BEL_SEKOLAH
+C:   00000202  A$BEL_SEKOLAH$1196                 BEL_SEKOLAH
+C:   00000202  C$dfplayer_mini_mp3.h$88$1$33      BEL_SEKOLAH
+C:   00000202  G$send_func$0$0                    BEL_SEKOLAH
+C:   00000202  _send_func                         BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000204  A$BEL_SEKOLAH$1200                 BEL_SEKOLAH
+C:   00000204  C$dfplayer_mini_mp3.h$91$2$35      BEL_SEKOLAH
+C:   00000205  A$BEL_SEKOLAH$1201                 BEL_SEKOLAH
+C:   00000207  A$BEL_SEKOLAH$1202                 BEL_SEKOLAH
+C:   00000208  A$BEL_SEKOLAH$1203                 BEL_SEKOLAH
+C:   0000020A  A$BEL_SEKOLAH$1204                 BEL_SEKOLAH
+C:   0000020C  A$BEL_SEKOLAH$1205                 BEL_SEKOLAH
+C:   0000020F  A$BEL_SEKOLAH$1206                 BEL_SEKOLAH
+C:   00000211  A$BEL_SEKOLAH$1209                 BEL_SEKOLAH
+C:   00000211  C$dfplayer_mini_mp3.h$90$1$34      BEL_SEKOLAH
+C:   00000212  A$BEL_SEKOLAH$1210                 BEL_SEKOLAH
+C:   00000215  A$BEL_SEKOLAH$1212                 BEL_SEKOLAH
+C:   00000217  A$BEL_SEKOLAH$1215                 BEL_SEKOLAH
+C:   00000217  C$dfplayer_mini_mp3.h$94$1$34      BEL_SEKOLAH
+C:   00000217  XG$send_func$0$0                   BEL_SEKOLAH
+C:   00000218  A$BEL_SEKOLAH$1229                 BEL_SEKOLAH
+C:   00000218  C$dfplayer_mini_mp3.h$95$1$34      BEL_SEKOLAH
+C:   00000218  G$mp3_send_cmd$0$0                 BEL_SEKOLAH
+C:   00000218  _mp3_send_cmd                      BEL_SEKOLAH
+C:   0000021A  A$BEL_SEKOLAH$1232                 BEL_SEKOLAH
+C:   0000021A  C$dfplayer_mini_mp3.h$96$1$37      BEL_SEKOLAH
+C:   0000021C  A$BEL_SEKOLAH$1235                 BEL_SEKOLAH
+C:   0000021C  C$dfplayer_mini_mp3.h$97$1$37      BEL_SEKOLAH
+C:   0000021F  A$BEL_SEKOLAH$1236                 BEL_SEKOLAH
+C:   00000222  A$BEL_SEKOLAH$1237                 BEL_SEKOLAH
+C:   00000225  A$BEL_SEKOLAH$1238                 BEL_SEKOLAH
+C:   00000228  A$BEL_SEKOLAH$1239                 BEL_SEKOLAH
+C:   0000022B  A$BEL_SEKOLAH$1242                 BEL_SEKOLAH
+C:   0000022B  C$dfplayer_mini_mp3.h$98$1$37      BEL_SEKOLAH
+C:   0000022E  A$BEL_SEKOLAH$1245                 BEL_SEKOLAH
+C:   0000022E  C$dfplayer_mini_mp3.h$99$1$37      BEL_SEKOLAH
+C:   00000231  A$BEL_SEKOLAH$1248                 BEL_SEKOLAH
+C:   00000231  C$dfplayer_mini_mp3.h$100$1$37     BEL_SEKOLAH
+C:   00000231  XG$mp3_send_cmd$0$0                BEL_SEKOLAH
+C:   00000232  A$BEL_SEKOLAH$1261                 BEL_SEKOLAH
+C:   00000232  C$dfplayer_mini_mp3.h$101$1$37     BEL_SEKOLAH
+C:   00000232  G$mp3_send_cmd_null$0$0            BEL_SEKOLAH
+C:   00000232  _mp3_send_cmd_null                 BEL_SEKOLAH
+C:   00000234  A$BEL_SEKOLAH$1264                 BEL_SEKOLAH
+C:   00000234  C$dfplayer_mini_mp3.h$102$1$39     BEL_SEKOLAH
+C:   00000236  A$BEL_SEKOLAH$1267                 BEL_SEKOLAH
+C:   00000236  C$dfplayer_mini_mp3.h$103$1$39     BEL_SEKOLAH
+C:   00000237  A$BEL_SEKOLAH$1268                 BEL_SEKOLAH
+C:   00000239  A$BEL_SEKOLAH$1269                 BEL_SEKOLAH
+C:   0000023B  A$BEL_SEKOLAH$1270                 BEL_SEKOLAH
+C:   0000023E  A$BEL_SEKOLAH$1271                 BEL_SEKOLAH
+C:   00000241  A$BEL_SEKOLAH$1272                 BEL_SEKOLAH
+C:   00000244  A$BEL_SEKOLAH$1275                 BEL_SEKOLAH
+C:   00000244  C$dfplayer_mini_mp3.h$104$1$39     BEL_SEKOLAH
+C:   00000247  A$BEL_SEKOLAH$1278                 BEL_SEKOLAH
+C:   00000247  C$dfplayer_mini_mp3.h$105$1$39     BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000024A  A$BEL_SEKOLAH$1281                 BEL_SEKOLAH
+C:   0000024A  C$dfplayer_mini_mp3.h$106$1$39     BEL_SEKOLAH
+C:   0000024A  XG$mp3_send_cmd_null$0$0           BEL_SEKOLAH
+C:   0000024B  A$BEL_SEKOLAH$1294                 BEL_SEKOLAH
+C:   0000024B  C$dfplayer_mini_mp3.h$107$1$39     BEL_SEKOLAH
+C:   0000024B  G$mp3_play_physical$0$0            BEL_SEKOLAH
+C:   0000024B  _mp3_play_physical                 BEL_SEKOLAH
+C:   0000024E  A$BEL_SEKOLAH$1295                 BEL_SEKOLAH
+C:   00000251  A$BEL_SEKOLAH$1298                 BEL_SEKOLAH
+C:   00000251  C$dfplayer_mini_mp3.h$108$1$41     BEL_SEKOLAH
+C:   00000254  A$BEL_SEKOLAH$1299                 BEL_SEKOLAH
+C:   00000257  A$BEL_SEKOLAH$1302                 BEL_SEKOLAH
+C:   00000257  C$dfplayer_mini_mp3.h$109$1$41     BEL_SEKOLAH
+C:   00000257  XG$mp3_play_physical$0$0           BEL_SEKOLAH
+C:   00000258  A$BEL_SEKOLAH$1315                 BEL_SEKOLAH
+C:   00000258  C$dfplayer_mini_mp3.h$110$1$41     BEL_SEKOLAH
+C:   00000258  C$dfplayer_mini_mp3.h$111$1$42     BEL_SEKOLAH
+C:   00000258  G$mp3_play_physical_null$0$0       BEL_SEKOLAH
+C:   00000258  _mp3_play_physical_null            BEL_SEKOLAH
+C:   0000025B  A$BEL_SEKOLAH$1316                 BEL_SEKOLAH
+C:   0000025E  A$BEL_SEKOLAH$1319                 BEL_SEKOLAH
+C:   0000025E  C$dfplayer_mini_mp3.h$112$1$42     BEL_SEKOLAH
+C:   0000025E  XG$mp3_play_physical_null$0$0      BEL_SEKOLAH
+C:   0000025F  A$BEL_SEKOLAH$1332                 BEL_SEKOLAH
+C:   0000025F  C$dfplayer_mini_mp3.h$113$1$42     BEL_SEKOLAH
+C:   0000025F  C$dfplayer_mini_mp3.h$114$1$43     BEL_SEKOLAH
+C:   0000025F  G$mp3_next$0$0                     BEL_SEKOLAH
+C:   0000025F  _mp3_next                          BEL_SEKOLAH
+C:   00000262  A$BEL_SEKOLAH$1333                 BEL_SEKOLAH
+C:   00000265  A$BEL_SEKOLAH$1336                 BEL_SEKOLAH
+C:   00000265  C$dfplayer_mini_mp3.h$115$1$43     BEL_SEKOLAH
+C:   00000265  XG$mp3_next$0$0                    BEL_SEKOLAH
+C:   00000266  A$BEL_SEKOLAH$1349                 BEL_SEKOLAH
+C:   00000266  C$dfplayer_mini_mp3.h$116$1$43     BEL_SEKOLAH
+C:   00000266  C$dfplayer_mini_mp3.h$117$1$44     BEL_SEKOLAH
+C:   00000266  G$mp3_prev$0$0                     BEL_SEKOLAH
+C:   00000266  _mp3_prev                          BEL_SEKOLAH
+C:   00000269  A$BEL_SEKOLAH$1350                 BEL_SEKOLAH
+C:   0000026C  A$BEL_SEKOLAH$1353                 BEL_SEKOLAH
+C:   0000026C  C$dfplayer_mini_mp3.h$118$1$44     BEL_SEKOLAH
+C:   0000026C  XG$mp3_prev$0$0                    BEL_SEKOLAH
+C:   0000026D  A$BEL_SEKOLAH$1366                 BEL_SEKOLAH
+C:   0000026D  C$dfplayer_mini_mp3.h$120$1$44     BEL_SEKOLAH
+C:   0000026D  G$mp3_set_volume$0$0               BEL_SEKOLAH
+C:   0000026D  _mp3_set_volume                    BEL_SEKOLAH
+C:   00000270  A$BEL_SEKOLAH$1367                 BEL_SEKOLAH
+C:   00000273  A$BEL_SEKOLAH$1370                 BEL_SEKOLAH
+C:   00000273  C$dfplayer_mini_mp3.h$121$1$46     BEL_SEKOLAH
+C:   00000276  A$BEL_SEKOLAH$1371                 BEL_SEKOLAH
+C:   00000279  A$BEL_SEKOLAH$1374                 BEL_SEKOLAH
+C:   00000279  C$dfplayer_mini_mp3.h$122$1$46     BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000279  XG$mp3_set_volume$0$0              BEL_SEKOLAH
+C:   0000027A  A$BEL_SEKOLAH$1387                 BEL_SEKOLAH
+C:   0000027A  C$dfplayer_mini_mp3.h$124$1$46     BEL_SEKOLAH
+C:   0000027A  G$mp3_set_EQ$0$0                   BEL_SEKOLAH
+C:   0000027A  _mp3_set_EQ                        BEL_SEKOLAH
+C:   0000027D  A$BEL_SEKOLAH$1388                 BEL_SEKOLAH
+C:   00000280  A$BEL_SEKOLAH$1391                 BEL_SEKOLAH
+C:   00000280  C$dfplayer_mini_mp3.h$125$1$48     BEL_SEKOLAH
+C:   00000283  A$BEL_SEKOLAH$1392                 BEL_SEKOLAH
+C:   00000286  A$BEL_SEKOLAH$1395                 BEL_SEKOLAH
+C:   00000286  C$dfplayer_mini_mp3.h$126$1$48     BEL_SEKOLAH
+C:   00000286  XG$mp3_set_EQ$0$0                  BEL_SEKOLAH
+C:   00000287  A$BEL_SEKOLAH$1408                 BEL_SEKOLAH
+C:   00000287  C$dfplayer_mini_mp3.h$128$1$48     BEL_SEKOLAH
+C:   00000287  G$mp3_set_device$0$0               BEL_SEKOLAH
+C:   00000287  _mp3_set_device                    BEL_SEKOLAH
+C:   0000028A  A$BEL_SEKOLAH$1409                 BEL_SEKOLAH
+C:   0000028D  A$BEL_SEKOLAH$1412                 BEL_SEKOLAH
+C:   0000028D  C$dfplayer_mini_mp3.h$129$1$50     BEL_SEKOLAH
+C:   00000290  A$BEL_SEKOLAH$1413                 BEL_SEKOLAH
+C:   00000293  A$BEL_SEKOLAH$1416                 BEL_SEKOLAH
+C:   00000293  C$dfplayer_mini_mp3.h$130$1$50     BEL_SEKOLAH
+C:   00000293  XG$mp3_set_device$0$0              BEL_SEKOLAH
+C:   00000294  A$BEL_SEKOLAH$1429                 BEL_SEKOLAH
+C:   00000294  C$dfplayer_mini_mp3.h$131$1$50     BEL_SEKOLAH
+C:   00000294  C$dfplayer_mini_mp3.h$132$1$51     BEL_SEKOLAH
+C:   00000294  G$mp3_sleep$0$0                    BEL_SEKOLAH
+C:   00000294  _mp3_sleep                         BEL_SEKOLAH
+C:   00000297  A$BEL_SEKOLAH$1430                 BEL_SEKOLAH
+C:   0000029A  A$BEL_SEKOLAH$1433                 BEL_SEKOLAH
+C:   0000029A  C$dfplayer_mini_mp3.h$133$1$51     BEL_SEKOLAH
+C:   0000029A  XG$mp3_sleep$0$0                   BEL_SEKOLAH
+C:   0000029B  A$BEL_SEKOLAH$1446                 BEL_SEKOLAH
+C:   0000029B  C$dfplayer_mini_mp3.h$134$1$51     BEL_SEKOLAH
+C:   0000029B  C$dfplayer_mini_mp3.h$135$1$52     BEL_SEKOLAH
+C:   0000029B  G$mp3_reset$0$0                    BEL_SEKOLAH
+C:   0000029B  _mp3_reset                         BEL_SEKOLAH
+C:   0000029E  A$BEL_SEKOLAH$1447                 BEL_SEKOLAH
+C:   000002A1  A$BEL_SEKOLAH$1450                 BEL_SEKOLAH
+C:   000002A1  C$dfplayer_mini_mp3.h$136$1$52     BEL_SEKOLAH
+C:   000002A1  XG$mp3_reset$0$0                   BEL_SEKOLAH
+C:   000002A2  A$BEL_SEKOLAH$1463                 BEL_SEKOLAH
+C:   000002A2  C$dfplayer_mini_mp3.h$137$1$52     BEL_SEKOLAH
+C:   000002A2  C$dfplayer_mini_mp3.h$138$1$53     BEL_SEKOLAH
+C:   000002A2  G$mp3_play_null$0$0                BEL_SEKOLAH
+C:   000002A2  _mp3_play_null                     BEL_SEKOLAH
+C:   000002A5  A$BEL_SEKOLAH$1464                 BEL_SEKOLAH
+C:   000002A8  A$BEL_SEKOLAH$1467                 BEL_SEKOLAH
+C:   000002A8  C$dfplayer_mini_mp3.h$139$1$53     BEL_SEKOLAH
+C:   000002A8  XG$mp3_play_null$0$0               BEL_SEKOLAH
+C:   000002A9  A$BEL_SEKOLAH$1480                 BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000002A9  C$dfplayer_mini_mp3.h$140$1$53     BEL_SEKOLAH
+C:   000002A9  C$dfplayer_mini_mp3.h$141$1$54     BEL_SEKOLAH
+C:   000002A9  G$mp3_pause$0$0                    BEL_SEKOLAH
+C:   000002A9  _mp3_pause                         BEL_SEKOLAH
+C:   000002AC  A$BEL_SEKOLAH$1481                 BEL_SEKOLAH
+C:   000002AF  A$BEL_SEKOLAH$1484                 BEL_SEKOLAH
+C:   000002AF  C$dfplayer_mini_mp3.h$142$1$54     BEL_SEKOLAH
+C:   000002AF  XG$mp3_pause$0$0                   BEL_SEKOLAH
+C:   000002B0  A$BEL_SEKOLAH$1497                 BEL_SEKOLAH
+C:   000002B0  C$dfplayer_mini_mp3.h$143$1$54     BEL_SEKOLAH
+C:   000002B0  C$dfplayer_mini_mp3.h$144$1$55     BEL_SEKOLAH
+C:   000002B0  G$mp3_stop$0$0                     BEL_SEKOLAH
+C:   000002B0  _mp3_stop                          BEL_SEKOLAH
+C:   000002B3  A$BEL_SEKOLAH$1498                 BEL_SEKOLAH
+C:   000002B6  A$BEL_SEKOLAH$1501                 BEL_SEKOLAH
+C:   000002B6  C$dfplayer_mini_mp3.h$145$1$55     BEL_SEKOLAH
+C:   000002B6  XG$mp3_stop$0$0                    BEL_SEKOLAH
+C:   000002B7  A$BEL_SEKOLAH$1515                 BEL_SEKOLAH
+C:   000002B7  C$dfplayer_mini_mp3.h$147$1$55     BEL_SEKOLAH
+C:   000002B7  G$mp3_play$0$0                     BEL_SEKOLAH
+C:   000002B7  _mp3_play                          BEL_SEKOLAH
+C:   000002B9  A$BEL_SEKOLAH$1518                 BEL_SEKOLAH
+C:   000002B9  C$dfplayer_mini_mp3.h$149$1$57     BEL_SEKOLAH
+C:   000002BB  A$BEL_SEKOLAH$1519                 BEL_SEKOLAH
+C:   000002BC  A$BEL_SEKOLAH$1520                 BEL_SEKOLAH
+C:   000002BD  A$BEL_SEKOLAH$1521                 BEL_SEKOLAH
+C:   000002BE  A$BEL_SEKOLAH$1524                 BEL_SEKOLAH
+C:   000002BE  C$dfplayer_mini_mp3.h$150$1$57     BEL_SEKOLAH
+C:   000002C1  A$BEL_SEKOLAH$1525                 BEL_SEKOLAH
+C:   000002C3  A$BEL_SEKOLAH$1526                 BEL_SEKOLAH
+C:   000002C5  A$BEL_SEKOLAH$1527                 BEL_SEKOLAH
+C:   000002C8  A$BEL_SEKOLAH$1530                 BEL_SEKOLAH
+C:   000002C8  C$dfplayer_mini_mp3.h$151$1$57     BEL_SEKOLAH
+C:   000002CB  A$BEL_SEKOLAH$1531                 BEL_SEKOLAH
+C:   000002CE  A$BEL_SEKOLAH$1534                 BEL_SEKOLAH
+C:   000002CE  C$dfplayer_mini_mp3.h$152$1$57     BEL_SEKOLAH
+C:   000002D1  A$BEL_SEKOLAH$1535                 BEL_SEKOLAH
+C:   000002D4  A$BEL_SEKOLAH$1538                 BEL_SEKOLAH
+C:   000002D4  C$dfplayer_mini_mp3.h$153$1$57     BEL_SEKOLAH
+C:   000002D7  A$BEL_SEKOLAH$1539                 BEL_SEKOLAH
+C:   000002DA  A$BEL_SEKOLAH$1542                 BEL_SEKOLAH
+C:   000002DA  C$dfplayer_mini_mp3.h$154$1$57     BEL_SEKOLAH
+C:   000002DD  A$BEL_SEKOLAH$1543                 BEL_SEKOLAH
+C:   000002E0  A$BEL_SEKOLAH$1546                 BEL_SEKOLAH
+C:   000002E0  C$dfplayer_mini_mp3.h$155$1$57     BEL_SEKOLAH
+C:   000002E3  A$BEL_SEKOLAH$1547                 BEL_SEKOLAH
+C:   000002E6  A$BEL_SEKOLAH$1548                 BEL_SEKOLAH
+C:   000002E8  A$BEL_SEKOLAH$1549                 BEL_SEKOLAH
+C:   000002EA  A$BEL_SEKOLAH$1552                 BEL_SEKOLAH
+C:   000002EA  C$dfplayer_mini_mp3.h$156$1$57     BEL_SEKOLAH
+C:   000002EC  A$BEL_SEKOLAH$1553                 BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000002EE  A$BEL_SEKOLAH$1554                 BEL_SEKOLAH
+C:   000002F1  A$BEL_SEKOLAH$1557                 BEL_SEKOLAH
+C:   000002F1  C$dfplayer_mini_mp3.h$157$1$57     BEL_SEKOLAH
+C:   000002F4  A$BEL_SEKOLAH$1558                 BEL_SEKOLAH
+C:   000002F7  A$BEL_SEKOLAH$1559                 BEL_SEKOLAH
+C:   000002F9  A$BEL_SEKOLAH$1562                 BEL_SEKOLAH
+C:   000002F9  C$dfplayer_mini_mp3.h$158$1$57     BEL_SEKOLAH
+C:   000002FB  A$BEL_SEKOLAH$1563                 BEL_SEKOLAH
+C:   000002FE  A$BEL_SEKOLAH$1566                 BEL_SEKOLAH
+C:   000002FE  C$dfplayer_mini_mp3.h$159$1$57     BEL_SEKOLAH
+C:   00000301  A$BEL_SEKOLAH$1567                 BEL_SEKOLAH
+C:   00000304  A$BEL_SEKOLAH$1570                 BEL_SEKOLAH
+C:   00000304  C$dfplayer_mini_mp3.h$160$1$57     BEL_SEKOLAH
+C:   00000304  XG$mp3_play$0$0                    BEL_SEKOLAH
+C:   00000305  A$BEL_SEKOLAH$1583                 BEL_SEKOLAH
+C:   00000305  C$dfplayer_mini_mp3.h$161$1$57     BEL_SEKOLAH
+C:   00000305  G$mp3_playy$0$0                    BEL_SEKOLAH
+C:   00000305  _mp3_playy                         BEL_SEKOLAH
+C:   00000307  A$BEL_SEKOLAH$1586                 BEL_SEKOLAH
+C:   00000307  C$dfplayer_mini_mp3.h$162$1$59     BEL_SEKOLAH
+C:   00000309  A$BEL_SEKOLAH$1587                 BEL_SEKOLAH
+C:   0000030C  A$BEL_SEKOLAH$1588                 BEL_SEKOLAH
+C:   0000030F  A$BEL_SEKOLAH$1589                 BEL_SEKOLAH
+C:   00000312  A$BEL_SEKOLAH$1592                 BEL_SEKOLAH
+C:   00000312  C$dfplayer_mini_mp3.h$163$1$59     BEL_SEKOLAH
+C:   00000312  XG$mp3_playy$0$0                   BEL_SEKOLAH
+C:   00000313  A$BEL_SEKOLAH$1605                 BEL_SEKOLAH
+C:   00000313  C$dfplayer_mini_mp3.h$164$1$59     BEL_SEKOLAH
+C:   00000313  C$dfplayer_mini_mp3.h$165$1$60     BEL_SEKOLAH
+C:   00000313  G$mp3_get_state$0$0                BEL_SEKOLAH
+C:   00000313  _mp3_get_state                     BEL_SEKOLAH
+C:   00000316  A$BEL_SEKOLAH$1606                 BEL_SEKOLAH
+C:   00000319  A$BEL_SEKOLAH$1609                 BEL_SEKOLAH
+C:   00000319  C$dfplayer_mini_mp3.h$166$1$60     BEL_SEKOLAH
+C:   00000319  XG$mp3_get_state$0$0               BEL_SEKOLAH
+C:   0000031A  A$BEL_SEKOLAH$1622                 BEL_SEKOLAH
+C:   0000031A  C$dfplayer_mini_mp3.h$167$1$60     BEL_SEKOLAH
+C:   0000031A  C$dfplayer_mini_mp3.h$168$1$61     BEL_SEKOLAH
+C:   0000031A  G$mp3_get_volume$0$0               BEL_SEKOLAH
+C:   0000031A  _mp3_get_volume                    BEL_SEKOLAH
+C:   0000031D  A$BEL_SEKOLAH$1623                 BEL_SEKOLAH
+C:   00000320  A$BEL_SEKOLAH$1626                 BEL_SEKOLAH
+C:   00000320  C$dfplayer_mini_mp3.h$169$1$61     BEL_SEKOLAH
+C:   00000320  XG$mp3_get_volume$0$0              BEL_SEKOLAH
+C:   00000321  A$BEL_SEKOLAH$1639                 BEL_SEKOLAH
+C:   00000321  C$dfplayer_mini_mp3.h$170$1$61     BEL_SEKOLAH
+C:   00000321  C$dfplayer_mini_mp3.h$171$1$62     BEL_SEKOLAH
+C:   00000321  G$mp3_get_u_sum$0$0                BEL_SEKOLAH
+C:   00000321  _mp3_get_u_sum                     BEL_SEKOLAH
+C:   00000324  A$BEL_SEKOLAH$1640                 BEL_SEKOLAH
+C:   00000327  A$BEL_SEKOLAH$1643                 BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000327  C$dfplayer_mini_mp3.h$172$1$62     BEL_SEKOLAH
+C:   00000327  XG$mp3_get_u_sum$0$0               BEL_SEKOLAH
+C:   00000328  A$BEL_SEKOLAH$1656                 BEL_SEKOLAH
+C:   00000328  C$dfplayer_mini_mp3.h$173$1$62     BEL_SEKOLAH
+C:   00000328  C$dfplayer_mini_mp3.h$174$1$63     BEL_SEKOLAH
+C:   00000328  G$mp3_get_tf_sum$0$0               BEL_SEKOLAH
+C:   00000328  _mp3_get_tf_sum                    BEL_SEKOLAH
+C:   0000032B  A$BEL_SEKOLAH$1657                 BEL_SEKOLAH
+C:   0000032E  A$BEL_SEKOLAH$1660                 BEL_SEKOLAH
+C:   0000032E  C$dfplayer_mini_mp3.h$175$1$63     BEL_SEKOLAH
+C:   0000032E  XG$mp3_get_tf_sum$0$0              BEL_SEKOLAH
+C:   0000032F  A$BEL_SEKOLAH$1673                 BEL_SEKOLAH
+C:   0000032F  C$dfplayer_mini_mp3.h$176$1$63     BEL_SEKOLAH
+C:   0000032F  C$dfplayer_mini_mp3.h$177$1$64     BEL_SEKOLAH
+C:   0000032F  G$mp3_get_flash_sum$0$0            BEL_SEKOLAH
+C:   0000032F  _mp3_get_flash_sum                 BEL_SEKOLAH
+C:   00000332  A$BEL_SEKOLAH$1674                 BEL_SEKOLAH
+C:   00000335  A$BEL_SEKOLAH$1677                 BEL_SEKOLAH
+C:   00000335  C$dfplayer_mini_mp3.h$178$1$64     BEL_SEKOLAH
+C:   00000335  XG$mp3_get_flash_sum$0$0           BEL_SEKOLAH
+C:   00000336  A$BEL_SEKOLAH$1690                 BEL_SEKOLAH
+C:   00000336  C$dfplayer_mini_mp3.h$179$1$64     BEL_SEKOLAH
+C:   00000336  C$dfplayer_mini_mp3.h$180$1$65     BEL_SEKOLAH
+C:   00000336  G$mp3_get_tf_current$0$0           BEL_SEKOLAH
+C:   00000336  _mp3_get_tf_current                BEL_SEKOLAH
+C:   00000339  A$BEL_SEKOLAH$1691                 BEL_SEKOLAH
+C:   0000033C  A$BEL_SEKOLAH$1694                 BEL_SEKOLAH
+C:   0000033C  C$dfplayer_mini_mp3.h$181$1$65     BEL_SEKOLAH
+C:   0000033C  XG$mp3_get_tf_current$0$0          BEL_SEKOLAH
+C:   0000033D  A$BEL_SEKOLAH$1707                 BEL_SEKOLAH
+C:   0000033D  C$dfplayer_mini_mp3.h$182$1$65     BEL_SEKOLAH
+C:   0000033D  C$dfplayer_mini_mp3.h$183$1$66     BEL_SEKOLAH
+C:   0000033D  G$mp3_get_u_current$0$0            BEL_SEKOLAH
+C:   0000033D  _mp3_get_u_current                 BEL_SEKOLAH
+C:   00000340  A$BEL_SEKOLAH$1708                 BEL_SEKOLAH
+C:   00000343  A$BEL_SEKOLAH$1711                 BEL_SEKOLAH
+C:   00000343  C$dfplayer_mini_mp3.h$184$1$66     BEL_SEKOLAH
+C:   00000343  XG$mp3_get_u_current$0$0           BEL_SEKOLAH
+C:   00000344  A$BEL_SEKOLAH$1724                 BEL_SEKOLAH
+C:   00000344  C$dfplayer_mini_mp3.h$185$1$66     BEL_SEKOLAH
+C:   00000344  C$dfplayer_mini_mp3.h$186$1$67     BEL_SEKOLAH
+C:   00000344  G$mp3_get_flash_current$0$0        BEL_SEKOLAH
+C:   00000344  _mp3_get_flash_current             BEL_SEKOLAH
+C:   00000347  A$BEL_SEKOLAH$1725                 BEL_SEKOLAH
+C:   0000034A  A$BEL_SEKOLAH$1728                 BEL_SEKOLAH
+C:   0000034A  C$dfplayer_mini_mp3.h$187$1$67     BEL_SEKOLAH
+C:   0000034A  XG$mp3_get_flash_current$0$0       BEL_SEKOLAH
+C:   0000034B  A$BEL_SEKOLAH$1741                 BEL_SEKOLAH
+C:   0000034B  C$dfplayer_mini_mp3.h$188$1$67     BEL_SEKOLAH
+C:   0000034B  C$dfplayer_mini_mp3.h$189$1$69     BEL_SEKOLAH
+C:   0000034B  G$mp3_single_loop$0$0              BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000034B  _mp3_single_loop                   BEL_SEKOLAH
+C:   0000034D  A$BEL_SEKOLAH$1742                 BEL_SEKOLAH
+C:   0000034E  A$BEL_SEKOLAH$1743                 BEL_SEKOLAH
+C:   0000034F  A$BEL_SEKOLAH$1744                 BEL_SEKOLAH
+C:   00000350  A$BEL_SEKOLAH$1745                 BEL_SEKOLAH
+C:   00000351  A$BEL_SEKOLAH$1746                 BEL_SEKOLAH
+C:   00000353  A$BEL_SEKOLAH$1747                 BEL_SEKOLAH
+C:   00000356  A$BEL_SEKOLAH$1748                 BEL_SEKOLAH
+C:   00000359  A$BEL_SEKOLAH$1749                 BEL_SEKOLAH
+C:   0000035C  A$BEL_SEKOLAH$1752                 BEL_SEKOLAH
+C:   0000035C  C$dfplayer_mini_mp3.h$190$1$69     BEL_SEKOLAH
+C:   0000035C  XG$mp3_single_loop$0$0             BEL_SEKOLAH
+C:   0000035D  A$BEL_SEKOLAH$1767                 BEL_SEKOLAH
+C:   0000035D  C$dfplayer_mini_mp3.h$192$1$69     BEL_SEKOLAH
+C:   0000035D  C$dfplayer_mini_mp3.h$193$1$71     BEL_SEKOLAH
+C:   0000035D  G$mp3_single_play$0$0              BEL_SEKOLAH
+C:   0000035D  _mp3_single_play                   BEL_SEKOLAH
+C:   00000360  A$BEL_SEKOLAH$1770                 BEL_SEKOLAH
+C:   00000360  C$dfplayer_mini_mp3.h$194$1$71     BEL_SEKOLAH
+C:   00000363  A$BEL_SEKOLAH$1771                 BEL_SEKOLAH
+C:   00000366  A$BEL_SEKOLAH$1774                 BEL_SEKOLAH
+C:   00000366  C$dfplayer_mini_mp3.h$195$1$71     BEL_SEKOLAH
+C:   00000368  A$BEL_SEKOLAH$1775                 BEL_SEKOLAH
+C:   0000036B  A$BEL_SEKOLAH$1778                 BEL_SEKOLAH
+C:   0000036B  C$dfplayer_mini_mp3.h$197$1$71     BEL_SEKOLAH
+C:   0000036B  XG$mp3_single_play$0$0             BEL_SEKOLAH
+C:   0000036C  A$BEL_SEKOLAH$1791                 BEL_SEKOLAH
+C:   0000036C  C$dfplayer_mini_mp3.h$198$1$71     BEL_SEKOLAH
+C:   0000036C  C$dfplayer_mini_mp3.h$199$1$73     BEL_SEKOLAH
+C:   0000036C  G$mp3_DAC$0$0                      BEL_SEKOLAH
+C:   0000036C  _mp3_DAC                           BEL_SEKOLAH
+C:   0000036E  A$BEL_SEKOLAH$1792                 BEL_SEKOLAH
+C:   0000036F  A$BEL_SEKOLAH$1793                 BEL_SEKOLAH
+C:   00000370  A$BEL_SEKOLAH$1794                 BEL_SEKOLAH
+C:   00000371  A$BEL_SEKOLAH$1795                 BEL_SEKOLAH
+C:   00000372  A$BEL_SEKOLAH$1796                 BEL_SEKOLAH
+C:   00000374  A$BEL_SEKOLAH$1797                 BEL_SEKOLAH
+C:   00000377  A$BEL_SEKOLAH$1798                 BEL_SEKOLAH
+C:   0000037A  A$BEL_SEKOLAH$1799                 BEL_SEKOLAH
+C:   0000037D  A$BEL_SEKOLAH$1802                 BEL_SEKOLAH
+C:   0000037D  C$dfplayer_mini_mp3.h$200$1$73     BEL_SEKOLAH
+C:   0000037D  XG$mp3_DAC$0$0                     BEL_SEKOLAH
+C:   0000037E  A$BEL_SEKOLAH$1815                 BEL_SEKOLAH
+C:   0000037E  C$dfplayer_mini_mp3.h$201$1$73     BEL_SEKOLAH
+C:   0000037E  C$dfplayer_mini_mp3.h$202$1$74     BEL_SEKOLAH
+C:   0000037E  G$mp3_random_play$0$0              BEL_SEKOLAH
+C:   0000037E  _mp3_random_play                   BEL_SEKOLAH
+C:   00000381  A$BEL_SEKOLAH$1816                 BEL_SEKOLAH
+C:   00000384  A$BEL_SEKOLAH$1819                 BEL_SEKOLAH
+C:   00000384  C$dfplayer_mini_mp3.h$203$1$74     BEL_SEKOLAH
+C:   00000384  XG$mp3_random_play$0$0             BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000385  A$BEL_SEKOLAH$1834                 BEL_SEKOLAH
+C:   00000385  C$lcd.h$40$1$74                    BEL_SEKOLAH
+C:   00000385  G$LCD_delay$0$0                    BEL_SEKOLAH
+C:   00000385  _LCD_delay                         BEL_SEKOLAH
+C:   00000387  A$BEL_SEKOLAH$1837                 BEL_SEKOLAH
+C:   00000389  A$BEL_SEKOLAH$1839                 BEL_SEKOLAH
+C:   0000038A  A$BEL_SEKOLAH$1840                 BEL_SEKOLAH
+C:   0000038B  A$BEL_SEKOLAH$1841                 BEL_SEKOLAH
+C:   0000038C  A$BEL_SEKOLAH$1842                 BEL_SEKOLAH
+C:   0000038E  A$BEL_SEKOLAH$1845                 BEL_SEKOLAH
+C:   0000038E  C$lcd.h$46$2$81                    BEL_SEKOLAH
+C:   00000390  A$BEL_SEKOLAH$1846                 BEL_SEKOLAH
+C:   00000392  A$BEL_SEKOLAH$1848                 BEL_SEKOLAH
+C:   00000393  A$BEL_SEKOLAH$1849                 BEL_SEKOLAH
+C:   00000396  A$BEL_SEKOLAH$1850                 BEL_SEKOLAH
+C:   00000397  A$BEL_SEKOLAH$1852                 BEL_SEKOLAH
+C:   00000398  A$BEL_SEKOLAH$1853                 BEL_SEKOLAH
+C:   00000399  A$BEL_SEKOLAH$1854                 BEL_SEKOLAH
+C:   0000039B  A$BEL_SEKOLAH$1857                 BEL_SEKOLAH
+C:   0000039B  C$lcd.h$44$1$80                    BEL_SEKOLAH
+C:   0000039C  A$BEL_SEKOLAH$1858                 BEL_SEKOLAH
+C:   0000039E  A$BEL_SEKOLAH$1862                 BEL_SEKOLAH
+C:   0000039E  C$lcd.h$49$1$80                    BEL_SEKOLAH
+C:   0000039E  XG$LCD_delay$0$0                   BEL_SEKOLAH
+C:   0000039F  A$BEL_SEKOLAH$1875                 BEL_SEKOLAH
+C:   0000039F  C$lcd.h$51$1$80                    BEL_SEKOLAH
+C:   0000039F  C$lcd.h$53$1$82                    BEL_SEKOLAH
+C:   0000039F  G$LCD_enable$0$0                   BEL_SEKOLAH
+C:   0000039F  _LCD_enable                        BEL_SEKOLAH
+C:   000003A1  A$BEL_SEKOLAH$1878                 BEL_SEKOLAH
+C:   000003A1  C$lcd.h$54$1$82                    BEL_SEKOLAH
+C:   000003A4  A$BEL_SEKOLAH$1879                 BEL_SEKOLAH
+C:   000003A7  A$BEL_SEKOLAH$1882                 BEL_SEKOLAH
+C:   000003A7  C$lcd.h$55$1$82                    BEL_SEKOLAH
+C:   000003A9  A$BEL_SEKOLAH$1885                 BEL_SEKOLAH
+C:   000003A9  C$lcd.h$56$1$82                    BEL_SEKOLAH
+C:   000003A9  XG$LCD_enable$0$0                  BEL_SEKOLAH
+C:   000003AA  A$BEL_SEKOLAH$1900                 BEL_SEKOLAH
+C:   000003AA  C$lcd.h$57$1$82                    BEL_SEKOLAH
+C:   000003AA  C$lcd.h$59$1$84                    BEL_SEKOLAH
+C:   000003AA  G$lcd_send$0$0                     BEL_SEKOLAH
+C:   000003AA  _lcd_send                          BEL_SEKOLAH
+C:   000003AC  A$BEL_SEKOLAH$1901                 BEL_SEKOLAH
+C:   000003AD  A$BEL_SEKOLAH$1902                 BEL_SEKOLAH
+C:   000003AE  A$BEL_SEKOLAH$1905                 BEL_SEKOLAH
+C:   000003AE  C$lcd.h$60$1$84                    BEL_SEKOLAH
+C:   000003B0  A$BEL_SEKOLAH$1906                 BEL_SEKOLAH
+C:   000003B2  A$BEL_SEKOLAH$1909                 BEL_SEKOLAH
+C:   000003B2  C$lcd.h$61$1$84                    BEL_SEKOLAH
+C:   000003B3  A$BEL_SEKOLAH$1910                 BEL_SEKOLAH
+C:   000003B4  A$BEL_SEKOLAH$1913                 BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000003B4  C$lcd.h$62$1$84                    BEL_SEKOLAH
+C:   000003B5  A$BEL_SEKOLAH$1914                 BEL_SEKOLAH
+C:   000003B6  A$BEL_SEKOLAH$1917                 BEL_SEKOLAH
+C:   000003B6  C$lcd.h$63$1$84                    BEL_SEKOLAH
+C:   000003B8  A$BEL_SEKOLAH$1918                 BEL_SEKOLAH
+C:   000003BA  A$BEL_SEKOLAH$1921                 BEL_SEKOLAH
+C:   000003BA  C$lcd.h$64$1$84                    BEL_SEKOLAH
+C:   000003BB  A$BEL_SEKOLAH$1922                 BEL_SEKOLAH
+C:   000003BC  A$BEL_SEKOLAH$1925                 BEL_SEKOLAH
+C:   000003BC  C$lcd.h$65$1$84                    BEL_SEKOLAH
+C:   000003BD  A$BEL_SEKOLAH$1926                 BEL_SEKOLAH
+C:   000003BE  A$BEL_SEKOLAH$1929                 BEL_SEKOLAH
+C:   000003BE  C$lcd.h$66$1$84                    BEL_SEKOLAH
+C:   000003C0  A$BEL_SEKOLAH$1930                 BEL_SEKOLAH
+C:   000003C2  A$BEL_SEKOLAH$1933                 BEL_SEKOLAH
+C:   000003C2  C$lcd.h$67$1$84                    BEL_SEKOLAH
+C:   000003C3  A$BEL_SEKOLAH$1934                 BEL_SEKOLAH
+C:   000003C4  A$BEL_SEKOLAH$1937                 BEL_SEKOLAH
+C:   000003C4  C$lcd.h$68$1$84                    BEL_SEKOLAH
+C:   000003C5  A$BEL_SEKOLAH$1938                 BEL_SEKOLAH
+C:   000003C6  A$BEL_SEKOLAH$1941                 BEL_SEKOLAH
+C:   000003C6  C$lcd.h$69$1$84                    BEL_SEKOLAH
+C:   000003C8  A$BEL_SEKOLAH$1942                 BEL_SEKOLAH
+C:   000003CA  A$BEL_SEKOLAH$1945                 BEL_SEKOLAH
+C:   000003CA  C$lcd.h$71$1$84                    BEL_SEKOLAH
+C:   000003CC  A$BEL_SEKOLAH$1946                 BEL_SEKOLAH
+C:   000003CF  A$BEL_SEKOLAH$1947                 BEL_SEKOLAH
+C:   000003D1  A$BEL_SEKOLAH$1950                 BEL_SEKOLAH
+C:   000003D1  C$lcd.h$73$1$84                    BEL_SEKOLAH
+C:   000003D2  A$BEL_SEKOLAH$1951                 BEL_SEKOLAH
+C:   000003D3  A$BEL_SEKOLAH$1954                 BEL_SEKOLAH
+C:   000003D3  C$lcd.h$74$1$84                    BEL_SEKOLAH
+C:   000003D4  A$BEL_SEKOLAH$1955                 BEL_SEKOLAH
+C:   000003D5  A$BEL_SEKOLAH$1958                 BEL_SEKOLAH
+C:   000003D5  C$lcd.h$75$1$84                    BEL_SEKOLAH
+C:   000003D7  A$BEL_SEKOLAH$1959                 BEL_SEKOLAH
+C:   000003D9  A$BEL_SEKOLAH$1962                 BEL_SEKOLAH
+C:   000003D9  C$lcd.h$76$1$84                    BEL_SEKOLAH
+C:   000003DA  A$BEL_SEKOLAH$1963                 BEL_SEKOLAH
+C:   000003DB  A$BEL_SEKOLAH$1966                 BEL_SEKOLAH
+C:   000003DB  C$lcd.h$77$1$84                    BEL_SEKOLAH
+C:   000003DC  A$BEL_SEKOLAH$1967                 BEL_SEKOLAH
+C:   000003DD  A$BEL_SEKOLAH$1970                 BEL_SEKOLAH
+C:   000003DD  C$lcd.h$78$1$84                    BEL_SEKOLAH
+C:   000003DF  A$BEL_SEKOLAH$1971                 BEL_SEKOLAH
+C:   000003E1  A$BEL_SEKOLAH$1974                 BEL_SEKOLAH
+C:   000003E1  C$lcd.h$79$1$84                    BEL_SEKOLAH
+C:   000003E2  A$BEL_SEKOLAH$1975                 BEL_SEKOLAH
+C:   000003E3  A$BEL_SEKOLAH$1978                 BEL_SEKOLAH
+C:   000003E3  C$lcd.h$80$1$84                    BEL_SEKOLAH
+C:   000003E4  A$BEL_SEKOLAH$1979                 BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000003E5  A$BEL_SEKOLAH$1982                 BEL_SEKOLAH
+C:   000003E5  C$lcd.h$81$1$84                    BEL_SEKOLAH
+C:   000003E7  A$BEL_SEKOLAH$1983                 BEL_SEKOLAH
+C:   000003E9  A$BEL_SEKOLAH$1986                 BEL_SEKOLAH
+C:   000003E9  C$lcd.h$82$1$84                    BEL_SEKOLAH
+C:   000003EA  A$BEL_SEKOLAH$1987                 BEL_SEKOLAH
+C:   000003EB  A$BEL_SEKOLAH$1990                 BEL_SEKOLAH
+C:   000003EB  C$lcd.h$83$1$84                    BEL_SEKOLAH
+C:   000003EC  A$BEL_SEKOLAH$1991                 BEL_SEKOLAH
+C:   000003EE  A$BEL_SEKOLAH$1994                 BEL_SEKOLAH
+C:   000003EE  C$lcd.h$85$1$84                    BEL_SEKOLAH
+C:   000003F1  A$BEL_SEKOLAH$1997                 BEL_SEKOLAH
+C:   000003F1  C$lcd.h$86$1$84                    BEL_SEKOLAH
+C:   000003F4  A$BEL_SEKOLAH$1998                 BEL_SEKOLAH
+C:   000003F7  A$BEL_SEKOLAH$2001                 BEL_SEKOLAH
+C:   000003F7  C$lcd.h$87$1$84                    BEL_SEKOLAH
+C:   000003F7  XG$lcd_send$0$0                    BEL_SEKOLAH
+C:   000003F8  A$BEL_SEKOLAH$2016                 BEL_SEKOLAH
+C:   000003F8  C$lcd.h$88$1$84                    BEL_SEKOLAH
+C:   000003F8  C$lcd.h$90$1$86                    BEL_SEKOLAH
+C:   000003F8  G$LCD_putc$0$0                     BEL_SEKOLAH
+C:   000003F8  _LCD_putc                          BEL_SEKOLAH
+C:   000003FA  A$BEL_SEKOLAH$2019                 BEL_SEKOLAH
+C:   000003FA  C$lcd.h$91$1$86                    BEL_SEKOLAH
+C:   000003FD  A$BEL_SEKOLAH$2022                 BEL_SEKOLAH
+C:   000003FD  C$lcd.h$92$1$86                    BEL_SEKOLAH
+C:   000003FD  XG$LCD_putc$0$0                    BEL_SEKOLAH
+C:   000003FE  A$BEL_SEKOLAH$2037                 BEL_SEKOLAH
+C:   000003FE  C$lcd.h$94$1$86                    BEL_SEKOLAH
+C:   000003FE  C$lcd.h$96$1$88                    BEL_SEKOLAH
+C:   000003FE  G$LCD_command$0$0                  BEL_SEKOLAH
+C:   000003FE  _LCD_command                       BEL_SEKOLAH
+C:   00000400  A$BEL_SEKOLAH$2040                 BEL_SEKOLAH
+C:   00000400  C$lcd.h$97$1$88                    BEL_SEKOLAH
+C:   00000403  A$BEL_SEKOLAH$2043                 BEL_SEKOLAH
+C:   00000403  C$lcd.h$98$1$88                    BEL_SEKOLAH
+C:   00000403  XG$LCD_command$0$0                 BEL_SEKOLAH
+C:   00000404  A$BEL_SEKOLAH$2056                 BEL_SEKOLAH
+C:   00000404  C$lcd.h$100$1$88                   BEL_SEKOLAH
+C:   00000404  G$LCD_puts$0$0                     BEL_SEKOLAH
+C:   00000404  _LCD_puts                          BEL_SEKOLAH
+C:   00000406  A$BEL_SEKOLAH$2057                 BEL_SEKOLAH
+C:   00000408  A$BEL_SEKOLAH$2058                 BEL_SEKOLAH
+C:   0000040A  A$BEL_SEKOLAH$2062                 BEL_SEKOLAH
+C:   0000040A  C$lcd.h$102$1$90                   BEL_SEKOLAH
+C:   0000040C  A$BEL_SEKOLAH$2063                 BEL_SEKOLAH
+C:   0000040E  A$BEL_SEKOLAH$2064                 BEL_SEKOLAH
+C:   00000410  A$BEL_SEKOLAH$2065                 BEL_SEKOLAH
+C:   00000413  A$BEL_SEKOLAH$2066                 BEL_SEKOLAH
+C:   00000414  A$BEL_SEKOLAH$2067                 BEL_SEKOLAH
+C:   00000416  A$BEL_SEKOLAH$2070                 BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000416  C$lcd.h$104$2$91                   BEL_SEKOLAH
+C:   00000418  A$BEL_SEKOLAH$2071                 BEL_SEKOLAH
+C:   00000419  A$BEL_SEKOLAH$2072                 BEL_SEKOLAH
+C:   0000041C  A$BEL_SEKOLAH$2073                 BEL_SEKOLAH
+C:   0000041D  A$BEL_SEKOLAH$2075                 BEL_SEKOLAH
+C:   0000041F  A$BEL_SEKOLAH$2076                 BEL_SEKOLAH
+C:   00000421  A$BEL_SEKOLAH$2077                 BEL_SEKOLAH
+C:   00000423  A$BEL_SEKOLAH$2078                 BEL_SEKOLAH
+C:   00000426  A$BEL_SEKOLAH$2079                 BEL_SEKOLAH
+C:   00000428  A$BEL_SEKOLAH$2080                 BEL_SEKOLAH
+C:   0000042A  A$BEL_SEKOLAH$2081                 BEL_SEKOLAH
+C:   0000042C  A$BEL_SEKOLAH$2082                 BEL_SEKOLAH
+C:   0000042E  A$BEL_SEKOLAH$2086                 BEL_SEKOLAH
+C:   0000042E  C$lcd.h$106$1$90                   BEL_SEKOLAH
+C:   0000042E  XG$LCD_puts$0$0                    BEL_SEKOLAH
+C:   0000042F  A$BEL_SEKOLAH$2099                 BEL_SEKOLAH
+C:   0000042F  C$lcd.h$108$1$90                   BEL_SEKOLAH
+C:   0000042F  C$lcd.h$110$1$92                   BEL_SEKOLAH
+C:   0000042F  G$LCD_init$0$0                     BEL_SEKOLAH
+C:   0000042F  _LCD_init                          BEL_SEKOLAH
+C:   00000431  A$BEL_SEKOLAH$2102                 BEL_SEKOLAH
+C:   00000431  C$lcd.h$111$1$92                   BEL_SEKOLAH
+C:   00000433  A$BEL_SEKOLAH$2105                 BEL_SEKOLAH
+C:   00000433  C$lcd.h$112$1$92                   BEL_SEKOLAH
+C:   00000436  A$BEL_SEKOLAH$2106                 BEL_SEKOLAH
+C:   00000439  A$BEL_SEKOLAH$2109                 BEL_SEKOLAH
+C:   00000439  C$lcd.h$113$1$92                   BEL_SEKOLAH
+C:   0000043C  A$BEL_SEKOLAH$2110                 BEL_SEKOLAH
+C:   0000043F  A$BEL_SEKOLAH$2113                 BEL_SEKOLAH
+C:   0000043F  C$lcd.h$114$1$92                   BEL_SEKOLAH
+C:   00000442  A$BEL_SEKOLAH$2114                 BEL_SEKOLAH
+C:   00000445  A$BEL_SEKOLAH$2117                 BEL_SEKOLAH
+C:   00000445  C$lcd.h$115$1$92                   BEL_SEKOLAH
+C:   00000448  A$BEL_SEKOLAH$2118                 BEL_SEKOLAH
+C:   0000044B  A$BEL_SEKOLAH$2121                 BEL_SEKOLAH
+C:   0000044B  C$lcd.h$116$1$92                   BEL_SEKOLAH
+C:   0000044E  A$BEL_SEKOLAH$2122                 BEL_SEKOLAH
+C:   00000451  A$BEL_SEKOLAH$2125                 BEL_SEKOLAH
+C:   00000451  C$lcd.h$117$1$92                   BEL_SEKOLAH
+C:   00000454  A$BEL_SEKOLAH$2126                 BEL_SEKOLAH
+C:   00000457  A$BEL_SEKOLAH$2129                 BEL_SEKOLAH
+C:   00000457  C$lcd.h$118$1$92                   BEL_SEKOLAH
+C:   0000045A  A$BEL_SEKOLAH$2130                 BEL_SEKOLAH
+C:   0000045D  A$BEL_SEKOLAH$2133                 BEL_SEKOLAH
+C:   0000045D  C$lcd.h$119$1$92                   BEL_SEKOLAH
+C:   0000045D  XG$LCD_init$0$0                    BEL_SEKOLAH
+C:   0000045E  A$BEL_SEKOLAH$2146                 BEL_SEKOLAH
+C:   0000045E  C$BEL_SEKOLAH.c$10$1$92            BEL_SEKOLAH
+C:   0000045E  C$BEL_SEKOLAH.c$11$1$93            BEL_SEKOLAH
+C:   0000045E  G$serial_init$0$0                  BEL_SEKOLAH
+C:   0000045E  _serial_init                       BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000461  A$BEL_SEKOLAH$2149                 BEL_SEKOLAH
+C:   00000461  C$BEL_SEKOLAH.c$12$1$93            BEL_SEKOLAH
+C:   00000464  A$BEL_SEKOLAH$2152                 BEL_SEKOLAH
+C:   00000464  C$BEL_SEKOLAH.c$13$1$93            BEL_SEKOLAH
+C:   00000467  A$BEL_SEKOLAH$2155                 BEL_SEKOLAH
+C:   00000467  C$BEL_SEKOLAH.c$15$1$93            BEL_SEKOLAH
+C:   00000469  A$BEL_SEKOLAH$2158                 BEL_SEKOLAH
+C:   00000469  C$BEL_SEKOLAH.c$16$1$93            BEL_SEKOLAH
+C:   00000469  XG$serial_init$0$0                 BEL_SEKOLAH
+C:   0000046A  A$BEL_SEKOLAH$2173                 BEL_SEKOLAH
+C:   0000046A  C$BEL_SEKOLAH.c$17$1$93            BEL_SEKOLAH
+C:   0000046A  C$BEL_SEKOLAH.c$19$1$93            BEL_SEKOLAH
+C:   0000046A  G$main$0$0                         BEL_SEKOLAH
+C:   0000046A  _main                              BEL_SEKOLAH
+C:   0000046C  A$BEL_SEKOLAH$2176                 BEL_SEKOLAH
+C:   0000046C  C$BEL_SEKOLAH.c$20$1$95            BEL_SEKOLAH
+C:   0000046E  A$BEL_SEKOLAH$2177                 BEL_SEKOLAH
+C:   00000471  A$BEL_SEKOLAH$2180                 BEL_SEKOLAH
+C:   00000471  C$BEL_SEKOLAH.c$23$1$95            BEL_SEKOLAH
+C:   00000474  A$BEL_SEKOLAH$2181                 BEL_SEKOLAH
+C:   00000477  A$BEL_SEKOLAH$2184                 BEL_SEKOLAH
+C:   00000477  C$BEL_SEKOLAH.c$25$1$95            BEL_SEKOLAH
+C:   0000047A  A$BEL_SEKOLAH$2187                 BEL_SEKOLAH
+C:   0000047A  C$BEL_SEKOLAH.c$26$1$95            BEL_SEKOLAH
+C:   0000047D  A$BEL_SEKOLAH$2190                 BEL_SEKOLAH
+C:   0000047D  C$BEL_SEKOLAH.c$27$1$95            BEL_SEKOLAH
+C:   00000480  A$BEL_SEKOLAH$2191                 BEL_SEKOLAH
+C:   00000483  A$BEL_SEKOLAH$2194                 BEL_SEKOLAH
+C:   00000483  C$BEL_SEKOLAH.c$30$1$95            BEL_SEKOLAH
+C:   00000486  A$BEL_SEKOLAH$2195                 BEL_SEKOLAH
+C:   00000489  A$BEL_SEKOLAH$2198                 BEL_SEKOLAH
+C:   00000489  C$BEL_SEKOLAH.c$33$1$95            BEL_SEKOLAH
+C:   0000048C  A$BEL_SEKOLAH$2199                 BEL_SEKOLAH
+C:   0000048F  A$BEL_SEKOLAH$2200                 BEL_SEKOLAH
+C:   00000491  A$BEL_SEKOLAH$2204                 BEL_SEKOLAH
+C:   00000491  C$BEL_SEKOLAH.c$37$2$96            BEL_SEKOLAH
+C:   00000494  A$BEL_SEKOLAH$2206                 BEL_SEKOLAH
+C:   00000496  A$BEL_SEKOLAH$2207                 BEL_SEKOLAH
+C:   00000497  A$BEL_SEKOLAH$2208                 BEL_SEKOLAH
+C:   00000499  A$BEL_SEKOLAH$2212                 BEL_SEKOLAH
+C:   00000499  C$BEL_SEKOLAH.c$38$2$96            BEL_SEKOLAH
+C:   0000049B  A$BEL_SEKOLAH$2216                 BEL_SEKOLAH
+C:   0000049B  C$BEL_SEKOLAH.c$39$2$96            BEL_SEKOLAH
+C:   0000049E  A$BEL_SEKOLAH$2217                 BEL_SEKOLAH
+C:   000004A0  A$BEL_SEKOLAH$2218                 BEL_SEKOLAH
+C:   000004A3  A$BEL_SEKOLAH$2219                 BEL_SEKOLAH
+C:   000004A5  A$BEL_SEKOLAH$2222                 BEL_SEKOLAH
+C:   000004A5  C$BEL_SEKOLAH.c$40$2$96            BEL_SEKOLAH
+C:   000004A7  A$BEL_SEKOLAH$2223                 BEL_SEKOLAH
+C:   000004A9  A$BEL_SEKOLAH$2224                 BEL_SEKOLAH
+C:   000004AC  A$BEL_SEKOLAH$2227                 BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000082    0000048B =        1163. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000004AC  C$BEL_SEKOLAH.c$41$2$96            BEL_SEKOLAH
+C:   000004AF  A$BEL_SEKOLAH$2228                 BEL_SEKOLAH
+C:   000004B2  A$BEL_SEKOLAH$2231                 BEL_SEKOLAH
+C:   000004B2  C$BEL_SEKOLAH.c$42$2$96            BEL_SEKOLAH
+C:   000004B5  A$BEL_SEKOLAH$2232                 BEL_SEKOLAH
+C:   000004B8  A$BEL_SEKOLAH$2235                 BEL_SEKOLAH
+C:   000004B8  C$BEL_SEKOLAH.c$43$2$96            BEL_SEKOLAH
+C:   000004BB  A$BEL_SEKOLAH$2236                 BEL_SEKOLAH
+C:   000004BE  A$BEL_SEKOLAH$2239                 BEL_SEKOLAH
+C:   000004BE  C$BEL_SEKOLAH.c$44$2$96            BEL_SEKOLAH
+C:   000004C1  A$BEL_SEKOLAH$2240                 BEL_SEKOLAH
+C:   000004C4  A$BEL_SEKOLAH$2243                 BEL_SEKOLAH
+C:   000004C4  C$BEL_SEKOLAH.c$45$2$96            BEL_SEKOLAH
+C:   000004C7  A$BEL_SEKOLAH$2246                 BEL_SEKOLAH
+C:   000004C7  C$BEL_SEKOLAH.c$46$2$96            BEL_SEKOLAH
+C:   000004CA  A$BEL_SEKOLAH$2247                 BEL_SEKOLAH
+C:   000004CD  A$BEL_SEKOLAH$2248                 BEL_SEKOLAH
+C:   000004CF  A$BEL_SEKOLAH$2249                 BEL_SEKOLAH
+C:   000004D1  A$BEL_SEKOLAH$2252                 BEL_SEKOLAH
+C:   000004D1  C$BEL_SEKOLAH.c$50$1$95            BEL_SEKOLAH
+C:   000004D1  XG$main$0$0                        BEL_SEKOLAH
+C:   000004D2  __gptrput                          _gptrput
+C:   000004ED  __gptrget                          _gptrget
+C:   00000509  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 40.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               0000050D    00000021 =          33. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000050D  G$data_jam$0$0                     BEL_SEKOLAH
+C:   0000050D  _data_jam                          BEL_SEKOLAH
+C:   00000518  G$data_kalender$0$0                BEL_SEKOLAH
+C:   00000518  _data_kalender                     BEL_SEKOLAH
+C:   00000523  G$data_jadwal$0$0                  BEL_SEKOLAH
+C:   00000523  _data_jadwal                       BEL_SEKOLAH
+ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
+
+Files Linked                              [ module(s) ]
+
+BEL_SEKOLAH.rel                           [  ]
+
+
+Libraries Linked                          [ object file ]
+
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrput.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _gptrget.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x0001
+PSEG = 0x0001
+ISEG = 0x0000
+BSEG = 0x0000
+
+

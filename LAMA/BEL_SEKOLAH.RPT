@@ -1,0 +1,61 @@
+Compiler   : BASCOM 8051 LIBRARY V 2.11
+Processor  : 8052
+Report     : BEL_SEKOLAH
+Date       : 08-14-2013
+Time       : 18:59:22
+
+Baud Timer : 1
+Baudrate   : 0
+Frequency  : 12000000
+Clock div. : 12
+ROM start  : &H0
+RAM start  : &H0
+LCD mode   : 4-bit
+StackStart : &H47
+Used ROM   : &H1EE5     7909 (dec)  > doesn't fit into selected codesize : 2048
+
+--------------------------------------------------------------------------------
+Variable                         Type            Address(hex)   Address(dec)
+--------------------------------------------------------------------------------
+
+ERR                              Bit               20.4
+
+
+JAM                              Byte              0032          50 
+MENIT                            Byte              0033          51 
+DETIK                            Byte              0034          52 
+ADDRH                            Byte              0035          53 
+ADDRL                            Byte              0036          54 
+HARI                             Byte              0037          55 
+TANGGAL                          Byte              0038          56 
+BULAN                            Byte              0039          57 
+TAHUN                            Byte              003A          58 
+TEMP                             Byte              003B          59 
+JADWAL_JAM                       Byte              003C          60 
+JADWAL_MENIT                     Byte              003D          61 
+LAGU                             Byte              003E          62 
+NOMER                            Byte              003F          63 
+PUTAR                            Byte              0044          68 
+JADWAL_HARI                      Byte              0045          69 
+JADWAL_NO                        Byte              0046          70 
+
+
+ADDR                             Word              0040          64 
+RELAY                            Word              0042          66 
+
+
+
+
+
+
+
+CONSTANTS
+--------------------------------------------------------------------------------
+Constant                         Value
+--------------------------------------------------------------------------------
+_BUILDVERSION                    211
+BACA_RTC                          209
+TULIS_RTC                         208
+BACA_EPROM                        161
+TULIS_EPROM                       160
+

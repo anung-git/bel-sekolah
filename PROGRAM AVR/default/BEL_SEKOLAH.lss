@@ -1,0 +1,949 @@
+
+BEL_SEKOLAH.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000a  00800100  000003cc  00000460  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003cc  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000b  0080010a  0080010a  0000046a  2**0
+                  ALLOC
+  3 .debug_aranges 00000020  00000000  00000000  0000046a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 000002b9  00000000  00000000  0000048a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000a72  00000000  00000000  00000743  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000268  00000000  00000000  000011b5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000735  00000000  00000000  0000141d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000260  00000000  00000000  00001b54  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000030d  00000000  00000000  00001db4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000038a  00000000  00000000  000020c1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000a8  00000000  00000000  0000244b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	ec ec       	ldi	r30, 0xCC	; 204
+  7c:	f3 e0       	ldi	r31, 0x03	; 3
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <.do_copy_data_start>
+
+00000080 <.do_copy_data_loop>:
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+
+00000084 <.do_copy_data_start>:
+  84:	aa 30       	cpi	r26, 0x0A	; 10
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <.do_copy_data_loop>
+
+0000008a <__do_clear_bss>:
+  8a:	11 e0       	ldi	r17, 0x01	; 1
+  8c:	aa e0       	ldi	r26, 0x0A	; 10
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+  94:	a5 31       	cpi	r26, 0x15	; 21
+  96:	b1 07       	cpc	r27, r17
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 8f 01 	call	0x31e	; 0x31e <main>
+  9e:	0c 94 e4 01 	jmp	0x3c8	; 0x3c8 <_exit>
+
+000000a2 <__bad_interrupt>:
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <USART_init>:
+void USART_send( unsigned char data);
+void USART_putstring(char* StringPtr); 
+char String[]="Hello world!!";    //String[] is in fact an array but when we put the text between the " " symbols the compiler threats it as a String and automatically puts the null termination character in the end of the text
+*/
+void USART_init(void){ 
+	UBRR0H = (uint8_t)(BAUD_PRESCALLER>>8);
+  a6:	10 92 c5 00 	sts	0x00C5, r1
+	UBRR0L = (uint8_t)(BAUD_PRESCALLER);
+  aa:	87 e6       	ldi	r24, 0x67	; 103
+  ac:	80 93 c4 00 	sts	0x00C4, r24
+	UCSR0B = (1<<RXEN0)|(1<<TXEN0);
+  b0:	88 e1       	ldi	r24, 0x18	; 24
+  b2:	80 93 c1 00 	sts	0x00C1, r24
+	UCSR0C = (3<<UCSZ00);
+  b6:	86 e0       	ldi	r24, 0x06	; 6
+  b8:	80 93 c2 00 	sts	0x00C2, r24
+}
+  bc:	08 95       	ret
+
+000000be <USART_receive>:
+unsigned char USART_receive(void){
+	while(!(UCSR0A & (1<<RXC0)));
+  be:	80 91 c0 00 	lds	r24, 0x00C0
+  c2:	87 ff       	sbrs	r24, 7
+  c4:	fc cf       	rjmp	.-8      	; 0xbe <USART_receive>
+	return UDR0;
+  c6:	80 91 c6 00 	lds	r24, 0x00C6
+}
+  ca:	08 95       	ret
+
+000000cc <USART_send>:
+void USART_send( unsigned char data){
+  cc:	98 2f       	mov	r25, r24
+	while(!(UCSR0A & (1<<UDRE0)));
+  ce:	80 91 c0 00 	lds	r24, 0x00C0
+  d2:	85 ff       	sbrs	r24, 5
+  d4:	fc cf       	rjmp	.-8      	; 0xce <USART_send+0x2>
+	UDR0 = data;
+  d6:	90 93 c6 00 	sts	0x00C6, r25
+}
+  da:	08 95       	ret
+
+000000dc <USART_putstring>:
+void USART_putstring(char* StringPtr){
+  dc:	fc 01       	movw	r30, r24
+  de:	07 c0       	rjmp	.+14     	; 0xee <USART_putstring+0x12>
+unsigned char USART_receive(void){
+	while(!(UCSR0A & (1<<RXC0)));
+	return UDR0;
+}
+void USART_send( unsigned char data){
+	while(!(UCSR0A & (1<<UDRE0)));
+  e0:	80 91 c0 00 	lds	r24, 0x00C0
+  e4:	85 ff       	sbrs	r24, 5
+  e6:	fc cf       	rjmp	.-8      	; 0xe0 <USART_putstring+0x4>
+	UDR0 = data;
+  e8:	90 93 c6 00 	sts	0x00C6, r25
+}
+void USART_putstring(char* StringPtr){
+	while(*StringPtr != 0x00){
+	USART_send(*StringPtr);
+	StringPtr++;}
+  ec:	31 96       	adiw	r30, 0x01	; 1
+void USART_send( unsigned char data){
+	while(!(UCSR0A & (1<<UDRE0)));
+	UDR0 = data;
+}
+void USART_putstring(char* StringPtr){
+	while(*StringPtr != 0x00){
+  ee:	90 81       	ld	r25, Z
+  f0:	99 23       	and	r25, r25
+  f2:	b1 f7       	brne	.-20     	; 0xe0 <USART_putstring+0x4>
+	USART_send(*StringPtr);
+	StringPtr++;}
+}
+  f4:	08 95       	ret
+
+000000f6 <mp3_set_reply>:
+extern uint8_t recv_buf[10];
+static bool is_reply = false;
+
+
+void mp3_set_reply (bool state) {
+	is_reply = state;
+  f6:	80 93 0a 01 	sts	0x010A, r24
+	send_buf[4] = is_reply;
+  fa:	80 93 04 01 	sts	0x0104, r24
+}
+  fe:	08 95       	ret
+
+00000100 <mp3_get_checksum>:
+static void fill_uint16_bigend (uint8_t *thebuf, uint16_t data) {
+	*thebuf =	(uint8_t)(data>>8);
+	*(thebuf+1) =	(uint8_t)data;
+}
+//calc checksum (1~6 byte)
+uint16_t mp3_get_checksum (uint8_t *thebuf) {
+ 100:	bc 01       	movw	r22, r24
+ 102:	40 e0       	ldi	r20, 0x00	; 0
+ 104:	50 e0       	ldi	r21, 0x00	; 0
+ 106:	21 e0       	ldi	r18, 0x01	; 1
+ 108:	30 e0       	ldi	r19, 0x00	; 0
+	uint16_t sum = 0;
+	for (int i=1; i<7; i++) {
+		sum += thebuf[i];
+ 10a:	fb 01       	movw	r30, r22
+ 10c:	e2 0f       	add	r30, r18
+ 10e:	f3 1f       	adc	r31, r19
+ 110:	80 81       	ld	r24, Z
+ 112:	48 0f       	add	r20, r24
+ 114:	51 1d       	adc	r21, r1
+	*(thebuf+1) =	(uint8_t)data;
+}
+//calc checksum (1~6 byte)
+uint16_t mp3_get_checksum (uint8_t *thebuf) {
+	uint16_t sum = 0;
+	for (int i=1; i<7; i++) {
+ 116:	2f 5f       	subi	r18, 0xFF	; 255
+ 118:	3f 4f       	sbci	r19, 0xFF	; 255
+ 11a:	27 30       	cpi	r18, 0x07	; 7
+ 11c:	31 05       	cpc	r19, r1
+ 11e:	a9 f7       	brne	.-22     	; 0x10a <mp3_get_checksum+0xa>
+ 120:	22 27       	eor	r18, r18
+ 122:	33 27       	eor	r19, r19
+ 124:	24 1b       	sub	r18, r20
+ 126:	35 0b       	sbc	r19, r21
+		sum += thebuf[i];
+	}
+	return -sum;
+}
+ 128:	c9 01       	movw	r24, r18
+ 12a:	08 95       	ret
+
+0000012c <mp3_fill_checksum>:
+//fill checksum to send_buf (7~8 byte)
+void mp3_fill_checksum () {
+ 12c:	e1 e0       	ldi	r30, 0x01	; 1
+ 12e:	f1 e0       	ldi	r31, 0x01	; 1
+ 130:	20 e0       	ldi	r18, 0x00	; 0
+ 132:	30 e0       	ldi	r19, 0x00	; 0
+}
+//calc checksum (1~6 byte)
+uint16_t mp3_get_checksum (uint8_t *thebuf) {
+	uint16_t sum = 0;
+	for (int i=1; i<7; i++) {
+		sum += thebuf[i];
+ 134:	81 91       	ld	r24, Z+
+ 136:	28 0f       	add	r18, r24
+ 138:	31 1d       	adc	r19, r1
+	*(thebuf+1) =	(uint8_t)data;
+}
+//calc checksum (1~6 byte)
+uint16_t mp3_get_checksum (uint8_t *thebuf) {
+	uint16_t sum = 0;
+	for (int i=1; i<7; i++) {
+ 13a:	81 e0       	ldi	r24, 0x01	; 1
+ 13c:	e7 30       	cpi	r30, 0x07	; 7
+ 13e:	f8 07       	cpc	r31, r24
+ 140:	c9 f7       	brne	.-14     	; 0x134 <mp3_fill_checksum+0x8>
+		sum += thebuf[i];
+	}
+	return -sum;
+ 142:	88 27       	eor	r24, r24
+ 144:	99 27       	eor	r25, r25
+ 146:	82 1b       	sub	r24, r18
+ 148:	93 0b       	sbc	r25, r19
+void mp3_set_reply (bool state) {
+	is_reply = state;
+	send_buf[4] = is_reply;
+}
+static void fill_uint16_bigend (uint8_t *thebuf, uint16_t data) {
+	*thebuf =	(uint8_t)(data>>8);
+ 14a:	90 83       	st	Z, r25
+	*(thebuf+1) =	(uint8_t)data;
+ 14c:	81 83       	std	Z+1, r24	; 0x01
+}
+//fill checksum to send_buf (7~8 byte)
+void mp3_fill_checksum () {
+	uint16_t checksum = mp3_get_checksum (send_buf);
+	fill_uint16_bigend (send_buf+7, checksum);
+}
+ 14e:	08 95       	ret
+
+00000150 <send_func>:
+//void h_send_func () {//hardware serial
+void send_func () {//hardware serial
+ 150:	e0 e0       	ldi	r30, 0x00	; 0
+ 152:	f1 e0       	ldi	r31, 0x01	; 1
+	for (int i=0; i<10; i++) {
+		USART_send(send_buf[i]);
+ 154:	90 81       	ld	r25, Z
+unsigned char USART_receive(void){
+	while(!(UCSR0A & (1<<RXC0)));
+	return UDR0;
+}
+void USART_send( unsigned char data){
+	while(!(UCSR0A & (1<<UDRE0)));
+ 156:	80 91 c0 00 	lds	r24, 0x00C0
+ 15a:	85 ff       	sbrs	r24, 5
+ 15c:	fc cf       	rjmp	.-8      	; 0x156 <send_func+0x6>
+	UDR0 = data;
+ 15e:	90 93 c6 00 	sts	0x00C6, r25
+ 162:	31 96       	adiw	r30, 0x01	; 1
+	uint16_t checksum = mp3_get_checksum (send_buf);
+	fill_uint16_bigend (send_buf+7, checksum);
+}
+//void h_send_func () {//hardware serial
+void send_func () {//hardware serial
+	for (int i=0; i<10; i++) {
+ 164:	81 e0       	ldi	r24, 0x01	; 1
+ 166:	ea 30       	cpi	r30, 0x0A	; 10
+ 168:	f8 07       	cpc	r31, r24
+ 16a:	a1 f7       	brne	.-24     	; 0x154 <send_func+0x4>
+		USART_send(send_buf[i]);
+	}
+}
+ 16c:	08 95       	ret
+
+0000016e <mp3_send_cmd>:
+void mp3_send_cmd (uint8_t cmd, uint16_t arg) {
+	send_buf[3] = cmd;
+ 16e:	80 93 03 01 	sts	0x0103, r24
+void mp3_set_reply (bool state) {
+	is_reply = state;
+	send_buf[4] = is_reply;
+}
+static void fill_uint16_bigend (uint8_t *thebuf, uint16_t data) {
+	*thebuf =	(uint8_t)(data>>8);
+ 172:	70 93 05 01 	sts	0x0105, r23
+	*(thebuf+1) =	(uint8_t)data;
+ 176:	60 93 06 01 	sts	0x0106, r22
+ 17a:	e1 e0       	ldi	r30, 0x01	; 1
+ 17c:	f1 e0       	ldi	r31, 0x01	; 1
+ 17e:	20 e0       	ldi	r18, 0x00	; 0
+ 180:	30 e0       	ldi	r19, 0x00	; 0
+}
+//calc checksum (1~6 byte)
+uint16_t mp3_get_checksum (uint8_t *thebuf) {
+	uint16_t sum = 0;
+	for (int i=1; i<7; i++) {
+		sum += thebuf[i];
+ 182:	81 91       	ld	r24, Z+
+ 184:	28 0f       	add	r18, r24
+ 186:	31 1d       	adc	r19, r1
+	*(thebuf+1) =	(uint8_t)data;
+}
+//calc checksum (1~6 byte)
+uint16_t mp3_get_checksum (uint8_t *thebuf) {
+	uint16_t sum = 0;
+	for (int i=1; i<7; i++) {
+ 188:	81 e0       	ldi	r24, 0x01	; 1
+ 18a:	e7 30       	cpi	r30, 0x07	; 7
+ 18c:	f8 07       	cpc	r31, r24
+ 18e:	c9 f7       	brne	.-14     	; 0x182 <mp3_send_cmd+0x14>
+		sum += thebuf[i];
+	}
+	return -sum;
+ 190:	88 27       	eor	r24, r24
+ 192:	99 27       	eor	r25, r25
+ 194:	82 1b       	sub	r24, r18
+ 196:	93 0b       	sbc	r25, r19
+void mp3_set_reply (bool state) {
+	is_reply = state;
+	send_buf[4] = is_reply;
+}
+static void fill_uint16_bigend (uint8_t *thebuf, uint16_t data) {
+	*thebuf =	(uint8_t)(data>>8);
+ 198:	90 83       	st	Z, r25
+	*(thebuf+1) =	(uint8_t)data;
+ 19a:	81 83       	std	Z+1, r24	; 0x01
+ 19c:	37 97       	sbiw	r30, 0x07	; 7
+	fill_uint16_bigend (send_buf+7, checksum);
+}
+//void h_send_func () {//hardware serial
+void send_func () {//hardware serial
+	for (int i=0; i<10; i++) {
+		USART_send(send_buf[i]);
+ 19e:	90 81       	ld	r25, Z
+unsigned char USART_receive(void){
+	while(!(UCSR0A & (1<<RXC0)));
+	return UDR0;
+}
+void USART_send( unsigned char data){
+	while(!(UCSR0A & (1<<UDRE0)));
+ 1a0:	80 91 c0 00 	lds	r24, 0x00C0
+ 1a4:	85 ff       	sbrs	r24, 5
+ 1a6:	fc cf       	rjmp	.-8      	; 0x1a0 <mp3_send_cmd+0x32>
+	UDR0 = data;
+ 1a8:	90 93 c6 00 	sts	0x00C6, r25
+ 1ac:	31 96       	adiw	r30, 0x01	; 1
+	uint16_t checksum = mp3_get_checksum (send_buf);
+	fill_uint16_bigend (send_buf+7, checksum);
+}
+//void h_send_func () {//hardware serial
+void send_func () {//hardware serial
+	for (int i=0; i<10; i++) {
+ 1ae:	81 e0       	ldi	r24, 0x01	; 1
+ 1b0:	ea 30       	cpi	r30, 0x0A	; 10
+ 1b2:	f8 07       	cpc	r31, r24
+ 1b4:	a1 f7       	brne	.-24     	; 0x19e <mp3_send_cmd+0x30>
+void mp3_send_cmd (uint8_t cmd, uint16_t arg) {
+	send_buf[3] = cmd;
+	fill_uint16_bigend ((send_buf+5), arg);
+	mp3_fill_checksum ();
+	send_func ();
+}
+ 1b6:	08 95       	ret
+
+000001b8 <mp3_send_cmd_null>:
+void mp3_send_cmd_null (uint8_t cmd) {
+	send_buf[3] = cmd;
+ 1b8:	80 93 03 01 	sts	0x0103, r24
+void mp3_set_reply (bool state) {
+	is_reply = state;
+	send_buf[4] = is_reply;
+}
+static void fill_uint16_bigend (uint8_t *thebuf, uint16_t data) {
+	*thebuf =	(uint8_t)(data>>8);
+ 1bc:	10 92 05 01 	sts	0x0105, r1
+	*(thebuf+1) =	(uint8_t)data;
+ 1c0:	10 92 06 01 	sts	0x0106, r1
+ 1c4:	e1 e0       	ldi	r30, 0x01	; 1
+ 1c6:	f1 e0       	ldi	r31, 0x01	; 1
+ 1c8:	20 e0       	ldi	r18, 0x00	; 0
+ 1ca:	30 e0       	ldi	r19, 0x00	; 0
+}
+//calc checksum (1~6 byte)
+uint16_t mp3_get_checksum (uint8_t *thebuf) {
+	uint16_t sum = 0;
+	for (int i=1; i<7; i++) {
+		sum += thebuf[i];
+ 1cc:	81 91       	ld	r24, Z+
+ 1ce:	28 0f       	add	r18, r24
+ 1d0:	31 1d       	adc	r19, r1
+	*(thebuf+1) =	(uint8_t)data;
+}
+//calc checksum (1~6 byte)
+uint16_t mp3_get_checksum (uint8_t *thebuf) {
+	uint16_t sum = 0;
+	for (int i=1; i<7; i++) {
+ 1d2:	81 e0       	ldi	r24, 0x01	; 1
+ 1d4:	e7 30       	cpi	r30, 0x07	; 7
+ 1d6:	f8 07       	cpc	r31, r24
+ 1d8:	c9 f7       	brne	.-14     	; 0x1cc <mp3_send_cmd_null+0x14>
+		sum += thebuf[i];
+	}
+	return -sum;
+ 1da:	88 27       	eor	r24, r24
+ 1dc:	99 27       	eor	r25, r25
+ 1de:	82 1b       	sub	r24, r18
+ 1e0:	93 0b       	sbc	r25, r19
+void mp3_set_reply (bool state) {
+	is_reply = state;
+	send_buf[4] = is_reply;
+}
+static void fill_uint16_bigend (uint8_t *thebuf, uint16_t data) {
+	*thebuf =	(uint8_t)(data>>8);
+ 1e2:	90 83       	st	Z, r25
+	*(thebuf+1) =	(uint8_t)data;
+ 1e4:	81 83       	std	Z+1, r24	; 0x01
+ 1e6:	37 97       	sbiw	r30, 0x07	; 7
+	fill_uint16_bigend (send_buf+7, checksum);
+}
+//void h_send_func () {//hardware serial
+void send_func () {//hardware serial
+	for (int i=0; i<10; i++) {
+		USART_send(send_buf[i]);
+ 1e8:	90 81       	ld	r25, Z
+unsigned char USART_receive(void){
+	while(!(UCSR0A & (1<<RXC0)));
+	return UDR0;
+}
+void USART_send( unsigned char data){
+	while(!(UCSR0A & (1<<UDRE0)));
+ 1ea:	80 91 c0 00 	lds	r24, 0x00C0
+ 1ee:	85 ff       	sbrs	r24, 5
+ 1f0:	fc cf       	rjmp	.-8      	; 0x1ea <mp3_send_cmd_null+0x32>
+	UDR0 = data;
+ 1f2:	90 93 c6 00 	sts	0x00C6, r25
+ 1f6:	31 96       	adiw	r30, 0x01	; 1
+	uint16_t checksum = mp3_get_checksum (send_buf);
+	fill_uint16_bigend (send_buf+7, checksum);
+}
+//void h_send_func () {//hardware serial
+void send_func () {//hardware serial
+	for (int i=0; i<10; i++) {
+ 1f8:	81 e0       	ldi	r24, 0x01	; 1
+ 1fa:	ea 30       	cpi	r30, 0x0A	; 10
+ 1fc:	f8 07       	cpc	r31, r24
+ 1fe:	a1 f7       	brne	.-24     	; 0x1e8 <mp3_send_cmd_null+0x30>
+void mp3_send_cmd_null (uint8_t cmd) {
+	send_buf[3] = cmd;
+	fill_uint16_bigend ((send_buf+5), 0);
+	mp3_fill_checksum ();
+	send_func ();
+}
+ 200:	08 95       	ret
+
+00000202 <mp3_play_physical>:
+void mp3_play_physical (uint16_t num) {
+ 202:	bc 01       	movw	r22, r24
+	mp3_send_cmd (0x03, num);
+ 204:	83 e0       	ldi	r24, 0x03	; 3
+ 206:	0e 94 b7 00 	call	0x16e	; 0x16e <mp3_send_cmd>
+}
+ 20a:	08 95       	ret
+
+0000020c <mp3_play_physical_null>:
+void mp3_play_physical_null () {
+	mp3_send_cmd_null (0x03);
+ 20c:	83 e0       	ldi	r24, 0x03	; 3
+ 20e:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 212:	08 95       	ret
+
+00000214 <mp3_next>:
+void mp3_next () {
+	mp3_send_cmd_null (0x01);
+ 214:	81 e0       	ldi	r24, 0x01	; 1
+ 216:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 21a:	08 95       	ret
+
+0000021c <mp3_prev>:
+void mp3_prev () {
+	mp3_send_cmd_null (0x02);
+ 21c:	82 e0       	ldi	r24, 0x02	; 2
+ 21e:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 222:	08 95       	ret
+
+00000224 <mp3_set_volume>:
+//0x06 set volume 0-30
+void mp3_set_volume (uint16_t volume) {
+ 224:	bc 01       	movw	r22, r24
+	mp3_send_cmd (0x06, volume);
+ 226:	86 e0       	ldi	r24, 0x06	; 6
+ 228:	0e 94 b7 00 	call	0x16e	; 0x16e <mp3_send_cmd>
+}
+ 22c:	08 95       	ret
+
+0000022e <mp3_set_EQ>:
+//0x07 set EQ0/1/2/3/4/5    Normal/Pop/Rock/Jazz/Classic/Bass
+void mp3_set_EQ (uint16_t eq) {
+ 22e:	bc 01       	movw	r22, r24
+	mp3_send_cmd (0x07, eq);
+ 230:	87 e0       	ldi	r24, 0x07	; 7
+ 232:	0e 94 b7 00 	call	0x16e	; 0x16e <mp3_send_cmd>
+}
+ 236:	08 95       	ret
+
+00000238 <mp3_set_device>:
+//0x09 set device 1/2/3/4/5 U/SD/AUX/SLEEP/FLASH
+void mp3_set_device (uint16_t device) {
+ 238:	bc 01       	movw	r22, r24
+	mp3_send_cmd (0x09, device);
+ 23a:	89 e0       	ldi	r24, 0x09	; 9
+ 23c:	0e 94 b7 00 	call	0x16e	; 0x16e <mp3_send_cmd>
+}
+ 240:	08 95       	ret
+
+00000242 <mp3_sleep>:
+void mp3_sleep () {
+	mp3_send_cmd_null (0x0a);
+ 242:	8a e0       	ldi	r24, 0x0A	; 10
+ 244:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 248:	08 95       	ret
+
+0000024a <mp3_reset>:
+void mp3_reset () {
+	mp3_send_cmd_null (0x0c);
+ 24a:	8c e0       	ldi	r24, 0x0C	; 12
+ 24c:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 250:	08 95       	ret
+
+00000252 <mp3_play_null>:
+void mp3_play_null () {
+	mp3_send_cmd_null (0x0d);
+ 252:	8d e0       	ldi	r24, 0x0D	; 13
+ 254:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 258:	08 95       	ret
+
+0000025a <mp3_pause>:
+void mp3_pause () {
+	mp3_send_cmd_null (0x0e);
+ 25a:	8e e0       	ldi	r24, 0x0E	; 14
+ 25c:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 260:	08 95       	ret
+
+00000262 <mp3_stop>:
+void mp3_stop () {
+	mp3_send_cmd_null (0x16);
+ 262:	86 e1       	ldi	r24, 0x16	; 22
+ 264:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 268:	08 95       	ret
+
+0000026a <mp3_play>:
+//play mp3 file in mp3 folder in your tf card
+void mp3_play (uint16_t num) {
+ 26a:	bc 01       	movw	r22, r24
+	mp3_send_cmd (0x12, num);
+ 26c:	82 e1       	ldi	r24, 0x12	; 18
+ 26e:	0e 94 b7 00 	call	0x16e	; 0x16e <mp3_send_cmd>
+}
+ 272:	08 95       	ret
+
+00000274 <mp3_get_state>:
+void mp3_get_state () {
+	mp3_send_cmd_null (0x42);
+ 274:	82 e4       	ldi	r24, 0x42	; 66
+ 276:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 27a:	08 95       	ret
+
+0000027c <mp3_get_volume>:
+void mp3_get_volume () {
+	mp3_send_cmd_null (0x43);
+ 27c:	83 e4       	ldi	r24, 0x43	; 67
+ 27e:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 282:	08 95       	ret
+
+00000284 <mp3_get_u_sum>:
+void mp3_get_u_sum () {
+	mp3_send_cmd_null (0x47);
+ 284:	87 e4       	ldi	r24, 0x47	; 71
+ 286:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 28a:	08 95       	ret
+
+0000028c <mp3_get_tf_sum>:
+void mp3_get_tf_sum () {
+	mp3_send_cmd_null (0x48);
+ 28c:	88 e4       	ldi	r24, 0x48	; 72
+ 28e:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 292:	08 95       	ret
+
+00000294 <mp3_get_flash_sum>:
+void mp3_get_flash_sum () {
+	mp3_send_cmd_null (0x49);
+ 294:	89 e4       	ldi	r24, 0x49	; 73
+ 296:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 29a:	08 95       	ret
+
+0000029c <mp3_get_tf_current>:
+void mp3_get_tf_current () {
+	mp3_send_cmd_null (0x4c);
+ 29c:	8c e4       	ldi	r24, 0x4C	; 76
+ 29e:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 2a2:	08 95       	ret
+
+000002a4 <mp3_get_u_current>:
+void mp3_get_u_current () {
+	mp3_send_cmd_null (0x4b);
+ 2a4:	8b e4       	ldi	r24, 0x4B	; 75
+ 2a6:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 2aa:	08 95       	ret
+
+000002ac <mp3_get_flash_current>:
+void mp3_get_flash_current () {
+	mp3_send_cmd_null (0x4d);
+ 2ac:	8d e4       	ldi	r24, 0x4D	; 77
+ 2ae:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 2b2:	08 95       	ret
+
+000002b4 <mp3_single_loop>:
+void mp3_single_loop (bool state) {
+	mp3_send_cmd (0x19, !state);
+ 2b4:	61 e0       	ldi	r22, 0x01	; 1
+ 2b6:	68 27       	eor	r22, r24
+ 2b8:	89 e1       	ldi	r24, 0x19	; 25
+ 2ba:	70 e0       	ldi	r23, 0x00	; 0
+ 2bc:	0e 94 b7 00 	call	0x16e	; 0x16e <mp3_send_cmd>
+}
+ 2c0:	08 95       	ret
+
+000002c2 <mp3_single_play>:
+//add 
+void mp3_single_play (uint16_t num) {
+	mp3_play (num);
+ 2c2:	0e 94 35 01 	call	0x26a	; 0x26a <mp3_play>
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+ 2c6:	80 e4       	ldi	r24, 0x40	; 64
+ 2c8:	9c e9       	ldi	r25, 0x9C	; 156
+ 2ca:	01 97       	sbiw	r24, 0x01	; 1
+ 2cc:	f1 f7       	brne	.-4      	; 0x2ca <mp3_single_play+0x8>
+	_delay_ms(10);
+	mp3_single_loop (true); 
+ 2ce:	81 e0       	ldi	r24, 0x01	; 1
+ 2d0:	0e 94 5a 01 	call	0x2b4	; 0x2b4 <mp3_single_loop>
+	//mp3_send_cmd (0x19, !state);
+}
+ 2d4:	08 95       	ret
+
+000002d6 <mp3_DAC>:
+void mp3_DAC (bool state) {
+	mp3_send_cmd (0x1a, !state);
+ 2d6:	61 e0       	ldi	r22, 0x01	; 1
+ 2d8:	68 27       	eor	r22, r24
+ 2da:	8a e1       	ldi	r24, 0x1A	; 26
+ 2dc:	70 e0       	ldi	r23, 0x00	; 0
+ 2de:	0e 94 b7 00 	call	0x16e	; 0x16e <mp3_send_cmd>
+}
+ 2e2:	08 95       	ret
+
+000002e4 <mp3_random_play>:
+void mp3_random_play () {
+	mp3_send_cmd_null (0x18);
+ 2e4:	88 e1       	ldi	r24, 0x18	; 24
+ 2e6:	0e 94 dc 00 	call	0x1b8	; 0x1b8 <mp3_send_cmd_null>
+}
+ 2ea:	08 95       	ret
+
+000002ec <wait>:
+#include "mymacro.h"
+#include "i2cmaster.h"
+//#include "serial.h"
+#include "DFPlayer_Mini_Mp3.h"
+void wait(unsigned int t){
+	t=t*10;
+ 2ec:	9c 01       	movw	r18, r24
+ 2ee:	ac 01       	movw	r20, r24
+ 2f0:	93 e0       	ldi	r25, 0x03	; 3
+ 2f2:	44 0f       	add	r20, r20
+ 2f4:	55 1f       	adc	r21, r21
+ 2f6:	9a 95       	dec	r25
+ 2f8:	e1 f7       	brne	.-8      	; 0x2f2 <wait+0x6>
+ 2fa:	22 0f       	add	r18, r18
+ 2fc:	33 1f       	adc	r19, r19
+ 2fe:	42 0f       	add	r20, r18
+ 300:	53 1f       	adc	r21, r19
+ 302:	20 e9       	ldi	r18, 0x90	; 144
+ 304:	31 e0       	ldi	r19, 0x01	; 1
+ 306:	07 c0       	rjmp	.+14     	; 0x316 <wait+0x2a>
+	while(--t){
+ 308:	88 ee       	ldi	r24, 0xE8	; 232
+ 30a:	93 e0       	ldi	r25, 0x03	; 3
+ 30c:	f9 01       	movw	r30, r18
+ 30e:	31 97       	sbiw	r30, 0x01	; 1
+ 310:	f1 f7       	brne	.-4      	; 0x30e <wait+0x22>
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 312:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 314:	d9 f7       	brne	.-10     	; 0x30c <wait+0x20>
+ 316:	41 50       	subi	r20, 0x01	; 1
+ 318:	50 40       	sbci	r21, 0x00	; 0
+ 31a:	b1 f7       	brne	.-20     	; 0x308 <wait+0x1c>
+		_delay_ms(100);
+	}
+}
+ 31c:	08 95       	ret
+
+0000031e <main>:
+int main(void){
+ 31e:	1f 93       	push	r17
+ 320:	cf 93       	push	r28
+ 322:	df 93       	push	r29
+void USART_send( unsigned char data);
+void USART_putstring(char* StringPtr); 
+char String[]="Hello world!!";    //String[] is in fact an array but when we put the text between the " " symbols the compiler threats it as a String and automatically puts the null termination character in the end of the text
+*/
+void USART_init(void){ 
+	UBRR0H = (uint8_t)(BAUD_PRESCALLER>>8);
+ 324:	10 92 c5 00 	sts	0x00C5, r1
+	UBRR0L = (uint8_t)(BAUD_PRESCALLER);
+ 328:	87 e6       	ldi	r24, 0x67	; 103
+ 32a:	80 93 c4 00 	sts	0x00C4, r24
+	UCSR0B = (1<<RXEN0)|(1<<TXEN0);
+ 32e:	88 e1       	ldi	r24, 0x18	; 24
+ 330:	80 93 c1 00 	sts	0x00C1, r24
+	UCSR0C = (3<<UCSZ00);
+ 334:	86 e0       	ldi	r24, 0x06	; 6
+ 336:	80 93 c2 00 	sts	0x00C2, r24
+ 33a:	80 e3       	ldi	r24, 0x30	; 48
+ 33c:	95 e7       	ldi	r25, 0x75	; 117
+ 33e:	20 e9       	ldi	r18, 0x90	; 144
+ 340:	31 e0       	ldi	r19, 0x01	; 1
+ 342:	f9 01       	movw	r30, r18
+ 344:	31 97       	sbiw	r30, 0x01	; 1
+ 346:	f1 f7       	brne	.-4      	; 0x344 <main+0x26>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 348:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 34a:	d9 f7       	brne	.-10     	; 0x342 <main+0x24>
+	USART_init();
+	_delay_ms(3000);
+	mp3_reset (); 
+ 34c:	0e 94 25 01 	call	0x24a	; 0x24a <mp3_reset>
+ 350:	88 e8       	ldi	r24, 0x88	; 136
+ 352:	93 e1       	ldi	r25, 0x13	; 19
+ 354:	20 e9       	ldi	r18, 0x90	; 144
+ 356:	31 e0       	ldi	r19, 0x01	; 1
+ 358:	f9 01       	movw	r30, r18
+ 35a:	31 97       	sbiw	r30, 0x01	; 1
+ 35c:	f1 f7       	brne	.-4      	; 0x35a <main+0x3c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 35e:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 360:	d9 f7       	brne	.-10     	; 0x358 <main+0x3a>
+	_delay_ms(500);
+	mp3_set_device (1) ;//flash disk
+ 362:	81 e0       	ldi	r24, 0x01	; 1
+ 364:	90 e0       	ldi	r25, 0x00	; 0
+ 366:	0e 94 1c 01 	call	0x238	; 0x238 <mp3_set_device>
+ 36a:	88 e8       	ldi	r24, 0x88	; 136
+ 36c:	93 e1       	ldi	r25, 0x13	; 19
+ 36e:	20 e9       	ldi	r18, 0x90	; 144
+ 370:	31 e0       	ldi	r19, 0x01	; 1
+ 372:	f9 01       	movw	r30, r18
+ 374:	31 97       	sbiw	r30, 0x01	; 1
+ 376:	f1 f7       	brne	.-4      	; 0x374 <main+0x56>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 378:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 37a:	d9 f7       	brne	.-10     	; 0x372 <main+0x54>
+	_delay_ms(500);
+	mp3_set_volume (20);
+ 37c:	84 e1       	ldi	r24, 0x14	; 20
+ 37e:	90 e0       	ldi	r25, 0x00	; 0
+ 380:	0e 94 12 01 	call	0x224	; 0x224 <mp3_set_volume>
+ 384:	88 e8       	ldi	r24, 0x88	; 136
+ 386:	93 e1       	ldi	r25, 0x13	; 19
+ 388:	20 e9       	ldi	r18, 0x90	; 144
+ 38a:	31 e0       	ldi	r19, 0x01	; 1
+ 38c:	f9 01       	movw	r30, r18
+ 38e:	31 97       	sbiw	r30, 0x01	; 1
+ 390:	f1 f7       	brne	.-4      	; 0x38e <main+0x70>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 392:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 394:	d9 f7       	brne	.-10     	; 0x38c <main+0x6e>
+ 396:	11 e0       	ldi	r17, 0x01	; 1
+ 398:	c0 e9       	ldi	r28, 0x90	; 144
+ 39a:	d1 e0       	ldi	r29, 0x01	; 1
+	_delay_ms(500);
+	for(;;){
+	  for(unsigned char a=1;a<26;a++){
+	  	mp3_play (a);
+ 39c:	81 2f       	mov	r24, r17
+ 39e:	90 e0       	ldi	r25, 0x00	; 0
+ 3a0:	0e 94 35 01 	call	0x26a	; 0x26a <mp3_play>
+ 3a4:	24 e6       	ldi	r18, 0x64	; 100
+ 3a6:	30 e0       	ldi	r19, 0x00	; 0
+ 3a8:	07 c0       	rjmp	.+14     	; 0x3b8 <main+0x9a>
+ 3aa:	88 ee       	ldi	r24, 0xE8	; 232
+ 3ac:	93 e0       	ldi	r25, 0x03	; 3
+ 3ae:	fe 01       	movw	r30, r28
+ 3b0:	31 97       	sbiw	r30, 0x01	; 1
+ 3b2:	f1 f7       	brne	.-4      	; 0x3b0 <main+0x92>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 3b4:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 3b6:	d9 f7       	brne	.-10     	; 0x3ae <main+0x90>
+#include "i2cmaster.h"
+//#include "serial.h"
+#include "DFPlayer_Mini_Mp3.h"
+void wait(unsigned int t){
+	t=t*10;
+	while(--t){
+ 3b8:	21 50       	subi	r18, 0x01	; 1
+ 3ba:	30 40       	sbci	r19, 0x00	; 0
+ 3bc:	b1 f7       	brne	.-20     	; 0x3aa <main+0x8c>
+	mp3_set_device (1) ;//flash disk
+	_delay_ms(500);
+	mp3_set_volume (20);
+	_delay_ms(500);
+	for(;;){
+	  for(unsigned char a=1;a<26;a++){
+ 3be:	1f 5f       	subi	r17, 0xFF	; 255
+ 3c0:	1a 31       	cpi	r17, 0x1A	; 26
+ 3c2:	60 f3       	brcs	.-40     	; 0x39c <main+0x7e>
+ 3c4:	11 e0       	ldi	r17, 0x01	; 1
+ 3c6:	ea cf       	rjmp	.-44     	; 0x39c <main+0x7e>
+
+000003c8 <_exit>:
+ 3c8:	f8 94       	cli
+
+000003ca <__stop_program>:
+ 3ca:	ff cf       	rjmp	.-2      	; 0x3ca <__stop_program>

@@ -1,0 +1,1051 @@
+;--------------------------------------------------------
+; File Created by SDCC : free open source ANSI-C Compiler
+; Version 3.4.0 #8981 (Apr  5 2014) (MINGW32)
+; This file was generated Wed Sep 02 16:53:06 2015
+;--------------------------------------------------------
+	.module dfplayer_mini_mp3
+	.optsdcc -mmcs51 --model-small
+	
+;--------------------------------------------------------
+; Public variables in this module
+;--------------------------------------------------------
+	.globl _mp3_random_play
+	.globl _mp3_DAC
+	.globl _mp3_single_play
+	.globl _mp3_single_loop
+	.globl _mp3_get_flash_current
+	.globl _mp3_get_u_current
+	.globl _mp3_get_tf_current
+	.globl _mp3_get_flash_sum
+	.globl _mp3_get_tf_sum
+	.globl _mp3_get_u_sum
+	.globl _mp3_get_volume
+	.globl _mp3_get_state
+	.globl _mp3_play
+	.globl _mp3_stop
+	.globl _mp3_pause
+	.globl _mp3_play_null
+	.globl _mp3_reset
+	.globl _mp3_sleep
+	.globl _mp3_set_device
+	.globl _mp3_set_EQ
+	.globl _mp3_set_volume
+	.globl _mp3_prev
+	.globl _mp3_next
+	.globl _mp3_play_physical_null
+	.globl _mp3_play_physical
+	.globl _mp3_send_cmd_null
+	.globl _mp3_send_cmd
+	.globl _send_func
+	.globl _mp3_fill_checksum
+	.globl _mp3_get_checksum
+	.globl _mp3_set_reply
+	.globl _delay
+	.globl _USART_putstring
+	.globl _USART_send
+	.globl _USART_receive
+	.globl _USART_init
+	.globl _mp3_DAC_PARM_1
+	.globl _mp3_single_loop_PARM_1
+	.globl _mp3_set_reply_PARM_1
+	.globl _mp3_send_cmd_PARM_2
+	.globl _recv_buf
+	.globl _send_buf
+;--------------------------------------------------------
+; special function registers
+;--------------------------------------------------------
+	.area RSEG    (ABS,DATA)
+	.org 0x0000
+;--------------------------------------------------------
+; special function bits
+;--------------------------------------------------------
+	.area RSEG    (ABS,DATA)
+	.org 0x0000
+;--------------------------------------------------------
+; overlayable register banks
+;--------------------------------------------------------
+	.area REG_BANK_0	(REL,OVR,DATA)
+	.ds 8
+;--------------------------------------------------------
+; internal ram data
+;--------------------------------------------------------
+	.area DSEG    (DATA)
+G$send_buf$0$0==.
+_send_buf::
+	.ds 10
+G$recv_buf$0$0==.
+_recv_buf::
+	.ds 10
+Ldfplayer_mini_mp3.fill_uint16_bigend$data$1$14==.
+_fill_uint16_bigend_PARM_2:
+	.ds 2
+Ldfplayer_mini_mp3.mp3_get_checksum$thebuf$1$16==.
+_mp3_get_checksum_thebuf_1_16:
+	.ds 3
+Ldfplayer_mini_mp3.mp3_send_cmd$arg$1$22==.
+_mp3_send_cmd_PARM_2:
+	.ds 2
+;--------------------------------------------------------
+; overlayable items in internal ram 
+;--------------------------------------------------------
+;--------------------------------------------------------
+; indirectly addressable internal ram data
+;--------------------------------------------------------
+	.area ISEG    (DATA)
+;--------------------------------------------------------
+; absolute internal ram data
+;--------------------------------------------------------
+	.area IABS    (ABS,DATA)
+	.area IABS    (ABS,DATA)
+;--------------------------------------------------------
+; bit data
+;--------------------------------------------------------
+	.area BSEG    (BIT)
+Fdfplayer_mini_mp3$is_reply$0$0==.
+_is_reply:
+	.ds 1
+Ldfplayer_mini_mp3.mp3_set_reply$state$1$12==.
+_mp3_set_reply_PARM_1:
+	.ds 1
+Ldfplayer_mini_mp3.mp3_single_loop$state$1$52==.
+_mp3_single_loop_PARM_1:
+	.ds 1
+Ldfplayer_mini_mp3.mp3_DAC$state$1$56==.
+_mp3_DAC_PARM_1:
+	.ds 1
+;--------------------------------------------------------
+; paged external ram data
+;--------------------------------------------------------
+	.area PSEG    (PAG,XDATA)
+;--------------------------------------------------------
+; external ram data
+;--------------------------------------------------------
+	.area XSEG    (XDATA)
+;--------------------------------------------------------
+; absolute external ram data
+;--------------------------------------------------------
+	.area XABS    (ABS,XDATA)
+;--------------------------------------------------------
+; external initialized ram data
+;--------------------------------------------------------
+	.area XISEG   (XDATA)
+	.area HOME    (CODE)
+	.area GSINIT0 (CODE)
+	.area GSINIT1 (CODE)
+	.area GSINIT2 (CODE)
+	.area GSINIT3 (CODE)
+	.area GSINIT4 (CODE)
+	.area GSINIT5 (CODE)
+	.area GSINIT  (CODE)
+	.area GSFINAL (CODE)
+	.area CSEG    (CODE)
+;--------------------------------------------------------
+; global & static initialisations
+;--------------------------------------------------------
+	.area HOME    (CODE)
+	.area GSINIT  (CODE)
+	.area GSFINAL (CODE)
+	.area GSINIT  (CODE)
+	C$dfplayer_mini_mp3.c$39$1$58 ==.
+;	dfplayer_mini_mp3.c:39: unsigned char send_buf[10] = { 0x7E, 0xFF, 06, 00, 00, 00, 00, 00, 00, 0xEF};
+	mov	_send_buf,#0x7E
+	mov	(_send_buf + 0x0001),#0xFF
+	mov	(_send_buf + 0x0002),#0x06
+	mov	(_send_buf + 0x0003),#0x00
+	mov	(_send_buf + 0x0004),#0x00
+	mov	(_send_buf + 0x0005),#0x00
+	mov	(_send_buf + 0x0006),#0x00
+	mov	(_send_buf + 0x0007),#0x00
+	mov	(_send_buf + 0x0008),#0x00
+	mov	(_send_buf + 0x0009),#0xEF
+	C$dfplayer_mini_mp3.c$42$1$58 ==.
+;	dfplayer_mini_mp3.c:42: static bool is_reply = false;
+	clr	_is_reply
+;--------------------------------------------------------
+; Home
+;--------------------------------------------------------
+	.area HOME    (CODE)
+	.area HOME    (CODE)
+;--------------------------------------------------------
+; code
+;--------------------------------------------------------
+	.area CSEG    (CODE)
+;------------------------------------------------------------
+;Allocation info for local variables in function 'USART_init'
+;------------------------------------------------------------
+	G$USART_init$0$0 ==.
+	C$dfplayer_mini_mp3.c$18$0$0 ==.
+;	dfplayer_mini_mp3.c:18: void USART_init(void){ 
+;	-----------------------------------------
+;	 function USART_init
+;	-----------------------------------------
+_USART_init:
+	ar7 = 0x07
+	ar6 = 0x06
+	ar5 = 0x05
+	ar4 = 0x04
+	ar3 = 0x03
+	ar2 = 0x02
+	ar1 = 0x01
+	ar0 = 0x00
+	C$dfplayer_mini_mp3.c$19$0$0 ==.
+;	dfplayer_mini_mp3.c:19: }
+	C$dfplayer_mini_mp3.c$19$0$0 ==.
+	XG$USART_init$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'USART_receive'
+;------------------------------------------------------------
+	G$USART_receive$0$0 ==.
+	C$dfplayer_mini_mp3.c$20$0$0 ==.
+;	dfplayer_mini_mp3.c:20: unsigned char USART_receive(void){
+;	-----------------------------------------
+;	 function USART_receive
+;	-----------------------------------------
+_USART_receive:
+	C$dfplayer_mini_mp3.c$22$1$4 ==.
+;	dfplayer_mini_mp3.c:22: return 0;
+	mov	dpl,#0x00
+	C$dfplayer_mini_mp3.c$23$1$4 ==.
+	XG$USART_receive$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'USART_send'
+;------------------------------------------------------------
+;data                      Allocated to registers 
+;------------------------------------------------------------
+	G$USART_send$0$0 ==.
+	C$dfplayer_mini_mp3.c$24$1$4 ==.
+;	dfplayer_mini_mp3.c:24: void USART_send( unsigned char data){
+;	-----------------------------------------
+;	 function USART_send
+;	-----------------------------------------
+_USART_send:
+	C$dfplayer_mini_mp3.c$27$1$4 ==.
+;	dfplayer_mini_mp3.c:27: }
+	C$dfplayer_mini_mp3.c$27$1$4 ==.
+	XG$USART_send$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'USART_putstring'
+;------------------------------------------------------------
+;StringPtr                 Allocated to registers r5 r6 r7 
+;------------------------------------------------------------
+	G$USART_putstring$0$0 ==.
+	C$dfplayer_mini_mp3.c$28$1$4 ==.
+;	dfplayer_mini_mp3.c:28: void USART_putstring(char* StringPtr){
+;	-----------------------------------------
+;	 function USART_putstring
+;	-----------------------------------------
+_USART_putstring:
+	mov	r5,dpl
+	mov	r6,dph
+	mov	r7,b
+	C$dfplayer_mini_mp3.c$29$1$8 ==.
+;	dfplayer_mini_mp3.c:29: while(*StringPtr != 0x00){
+00101$:
+	mov	dpl,r5
+	mov	dph,r6
+	mov	b,r7
+	lcall	__gptrget
+	mov	r4,a
+	jz	00104$
+	C$dfplayer_mini_mp3.c$30$2$9 ==.
+;	dfplayer_mini_mp3.c:30: USART_send(*StringPtr);
+	mov	dpl,r4
+	push	ar7
+	push	ar6
+	push	ar5
+	lcall	_USART_send
+	pop	ar5
+	pop	ar6
+	pop	ar7
+	C$dfplayer_mini_mp3.c$31$2$9 ==.
+;	dfplayer_mini_mp3.c:31: StringPtr++;}
+	inc	r5
+	cjne	r5,#0x00,00101$
+	inc	r6
+	sjmp	00101$
+00104$:
+	C$dfplayer_mini_mp3.c$32$1$8 ==.
+	XG$USART_putstring$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'delay'
+;------------------------------------------------------------
+;a                         Allocated to registers r6 r7 
+;c                         Allocated to registers r5 
+;------------------------------------------------------------
+	G$delay$0$0 ==.
+	C$delay.h$1$1$8 ==.
+;	delay.h:1: void delay(unsigned int a){
+;	-----------------------------------------
+;	 function delay
+;	-----------------------------------------
+_delay:
+	mov	r6,dpl
+	mov	r7,dph
+00107$:
+	C$delay.h$3$1$11 ==.
+;	delay.h:3: for(;a>0;a--)
+	mov	a,r6
+	orl	a,r7
+	jz	00109$
+	C$delay.h$4$1$11 ==.
+;	delay.h:4: for(c=0;c<100;c++);
+	mov	r5,#0x64
+00105$:
+	mov	ar4,r5
+	mov	a,r4
+	dec	a
+	mov	r5,a
+	jnz	00105$
+	C$delay.h$3$1$11 ==.
+;	delay.h:3: for(;a>0;a--)
+	dec	r6
+	cjne	r6,#0xFF,00127$
+	dec	r7
+00127$:
+	sjmp	00107$
+00109$:
+	C$delay.h$5$1$11 ==.
+	XG$delay$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_set_reply'
+;------------------------------------------------------------
+	G$mp3_set_reply$0$0 ==.
+	C$dfplayer_mini_mp3.c$45$1$11 ==.
+;	dfplayer_mini_mp3.c:45: void mp3_set_reply (bool state) {
+;	-----------------------------------------
+;	 function mp3_set_reply
+;	-----------------------------------------
+_mp3_set_reply:
+	C$dfplayer_mini_mp3.c$46$1$13 ==.
+;	dfplayer_mini_mp3.c:46: is_reply = state;
+	mov	c,_mp3_set_reply_PARM_1
+	C$dfplayer_mini_mp3.c$47$1$13 ==.
+;	dfplayer_mini_mp3.c:47: send_buf[4] = is_reply;
+	mov  _is_reply,c
+	clr	a
+	rlc	a
+	mov	r7,a
+	mov	(_send_buf + 0x0004),r7
+	C$dfplayer_mini_mp3.c$48$1$13 ==.
+	XG$mp3_set_reply$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'fill_uint16_bigend'
+;------------------------------------------------------------
+;data                      Allocated with name '_fill_uint16_bigend_PARM_2'
+;thebuf                    Allocated to registers r5 r6 r7 
+;------------------------------------------------------------
+	Fdfplayer_mini_mp3$fill_uint16_bigend$0$0 ==.
+	C$dfplayer_mini_mp3.c$49$1$13 ==.
+;	dfplayer_mini_mp3.c:49: static void fill_uint16_bigend (unsigned char *thebuf, unsigned int data) {
+;	-----------------------------------------
+;	 function fill_uint16_bigend
+;	-----------------------------------------
+_fill_uint16_bigend:
+	C$dfplayer_mini_mp3.c$50$1$15 ==.
+;	dfplayer_mini_mp3.c:50: *thebuf =	(unsigned char)(data>>8);
+	mov	r5,dpl
+	mov	r6,dph
+	mov	r7,b
+	mov	r4,(_fill_uint16_bigend_PARM_2 + 1)
+	mov	a,r4
+	lcall	__gptrput
+	C$dfplayer_mini_mp3.c$51$1$15 ==.
+;	dfplayer_mini_mp3.c:51: *(thebuf+1) =	(unsigned char)data;
+	inc	r5
+	cjne	r5,#0x00,00103$
+	inc	r6
+00103$:
+	mov	r4,_fill_uint16_bigend_PARM_2
+	mov	dpl,r5
+	mov	dph,r6
+	mov	b,r7
+	mov	a,r4
+	lcall	__gptrput
+	C$dfplayer_mini_mp3.c$52$1$15 ==.
+	XFdfplayer_mini_mp3$fill_uint16_bigend$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_checksum'
+;------------------------------------------------------------
+;thebuf                    Allocated with name '_mp3_get_checksum_thebuf_1_16'
+;sum                       Allocated to registers r3 r4 
+;i                         Allocated to registers r1 r2 
+;------------------------------------------------------------
+	G$mp3_get_checksum$0$0 ==.
+	C$dfplayer_mini_mp3.c$54$1$15 ==.
+;	dfplayer_mini_mp3.c:54: unsigned int mp3_get_checksum (unsigned char *thebuf) {
+;	-----------------------------------------
+;	 function mp3_get_checksum
+;	-----------------------------------------
+_mp3_get_checksum:
+	mov	_mp3_get_checksum_thebuf_1_16,dpl
+	mov	(_mp3_get_checksum_thebuf_1_16 + 1),dph
+	mov	(_mp3_get_checksum_thebuf_1_16 + 2),b
+	C$dfplayer_mini_mp3.c$55$1$15 ==.
+;	dfplayer_mini_mp3.c:55: unsigned int sum = 0;
+	mov	r3,#0x00
+	mov	r4,#0x00
+	C$dfplayer_mini_mp3.c$57$1$17 ==.
+;	dfplayer_mini_mp3.c:57: for (i=1; i<7; i++) {
+	mov	r1,#0x01
+	mov	r2,#0x00
+00102$:
+	C$dfplayer_mini_mp3.c$58$2$18 ==.
+;	dfplayer_mini_mp3.c:58: sum += thebuf[i];
+	mov	a,r1
+	add	a,_mp3_get_checksum_thebuf_1_16
+	mov	r0,a
+	mov	a,r2
+	addc	a,(_mp3_get_checksum_thebuf_1_16 + 1)
+	mov	r6,a
+	mov	r7,(_mp3_get_checksum_thebuf_1_16 + 2)
+	mov	dpl,r0
+	mov	dph,r6
+	mov	b,r7
+	lcall	__gptrget
+	mov	r0,a
+	mov	r7,#0x00
+	add	a,r3
+	mov	r3,a
+	mov	a,r7
+	addc	a,r4
+	mov	r4,a
+	C$dfplayer_mini_mp3.c$57$1$17 ==.
+;	dfplayer_mini_mp3.c:57: for (i=1; i<7; i++) {
+	inc	r1
+	cjne	r1,#0x00,00112$
+	inc	r2
+00112$:
+	clr	c
+	mov	a,r1
+	subb	a,#0x07
+	mov	a,r2
+	xrl	a,#0x80
+	subb	a,#0x80
+	C$dfplayer_mini_mp3.c$60$1$17 ==.
+;	dfplayer_mini_mp3.c:60: return -sum;
+	jc	00102$
+	clr	a
+	subb	a,r3
+	mov	dpl,a
+	clr	a
+	subb	a,r4
+	mov	dph,a
+	C$dfplayer_mini_mp3.c$61$1$17 ==.
+	XG$mp3_get_checksum$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_fill_checksum'
+;------------------------------------------------------------
+;checksum                  Allocated to registers 
+;------------------------------------------------------------
+	G$mp3_fill_checksum$0$0 ==.
+	C$dfplayer_mini_mp3.c$63$1$17 ==.
+;	dfplayer_mini_mp3.c:63: void mp3_fill_checksum () {
+;	-----------------------------------------
+;	 function mp3_fill_checksum
+;	-----------------------------------------
+_mp3_fill_checksum:
+	C$dfplayer_mini_mp3.c$64$1$19 ==.
+;	dfplayer_mini_mp3.c:64: unsigned int checksum = mp3_get_checksum (send_buf);
+	mov	dptr,#_send_buf
+	mov	b,#0x40
+	lcall	_mp3_get_checksum
+	mov	_fill_uint16_bigend_PARM_2,dpl
+	mov	(_fill_uint16_bigend_PARM_2 + 1),dph
+	C$dfplayer_mini_mp3.c$65$1$19 ==.
+;	dfplayer_mini_mp3.c:65: fill_uint16_bigend (send_buf+7, checksum);
+	mov	dptr,#(_send_buf + 0x0007)
+	mov	b,#0x40
+	lcall	_fill_uint16_bigend
+	C$dfplayer_mini_mp3.c$66$1$19 ==.
+	XG$mp3_fill_checksum$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'send_func'
+;------------------------------------------------------------
+;i                         Allocated to registers r6 r7 
+;------------------------------------------------------------
+	G$send_func$0$0 ==.
+	C$dfplayer_mini_mp3.c$68$1$19 ==.
+;	dfplayer_mini_mp3.c:68: void send_func () {//hardware serial
+;	-----------------------------------------
+;	 function send_func
+;	-----------------------------------------
+_send_func:
+	C$dfplayer_mini_mp3.c$70$1$20 ==.
+;	dfplayer_mini_mp3.c:70: for (i=0; i<10; i++) {
+	mov	r6,#0x00
+	mov	r7,#0x00
+00102$:
+	C$dfplayer_mini_mp3.c$71$2$21 ==.
+;	dfplayer_mini_mp3.c:71: USART_send(send_buf[i]);
+	mov	a,r6
+	add	a,#_send_buf
+	mov	r1,a
+	mov	dpl,@r1
+	push	ar7
+	push	ar6
+	lcall	_USART_send
+	pop	ar6
+	pop	ar7
+	C$dfplayer_mini_mp3.c$70$1$20 ==.
+;	dfplayer_mini_mp3.c:70: for (i=0; i<10; i++) {
+	inc	r6
+	cjne	r6,#0x00,00109$
+	inc	r7
+00109$:
+	clr	c
+	mov	a,r6
+	subb	a,#0x0A
+	mov	a,r7
+	xrl	a,#0x80
+	subb	a,#0x80
+	jc	00102$
+	C$dfplayer_mini_mp3.c$73$1$20 ==.
+	XG$send_func$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_send_cmd'
+;------------------------------------------------------------
+;arg                       Allocated with name '_mp3_send_cmd_PARM_2'
+;cmd                       Allocated to registers r7 
+;------------------------------------------------------------
+	G$mp3_send_cmd$0$0 ==.
+	C$dfplayer_mini_mp3.c$74$1$20 ==.
+;	dfplayer_mini_mp3.c:74: void mp3_send_cmd (unsigned char cmd, unsigned int arg) {
+;	-----------------------------------------
+;	 function mp3_send_cmd
+;	-----------------------------------------
+_mp3_send_cmd:
+	mov	r7,dpl
+	C$dfplayer_mini_mp3.c$75$1$23 ==.
+;	dfplayer_mini_mp3.c:75: send_buf[3] = cmd;
+	mov	(_send_buf + 0x0003),r7
+	C$dfplayer_mini_mp3.c$76$1$23 ==.
+;	dfplayer_mini_mp3.c:76: fill_uint16_bigend ((send_buf+5), arg);
+	mov	_fill_uint16_bigend_PARM_2,_mp3_send_cmd_PARM_2
+	mov	(_fill_uint16_bigend_PARM_2 + 1),(_mp3_send_cmd_PARM_2 + 1)
+	mov	dptr,#(_send_buf + 0x0005)
+	mov	b,#0x40
+	lcall	_fill_uint16_bigend
+	C$dfplayer_mini_mp3.c$77$1$23 ==.
+;	dfplayer_mini_mp3.c:77: mp3_fill_checksum ();
+	lcall	_mp3_fill_checksum
+	C$dfplayer_mini_mp3.c$78$1$23 ==.
+;	dfplayer_mini_mp3.c:78: send_func ();
+	lcall	_send_func
+	C$dfplayer_mini_mp3.c$79$1$23 ==.
+	XG$mp3_send_cmd$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_send_cmd_null'
+;------------------------------------------------------------
+;cmd                       Allocated to registers r7 
+;------------------------------------------------------------
+	G$mp3_send_cmd_null$0$0 ==.
+	C$dfplayer_mini_mp3.c$80$1$23 ==.
+;	dfplayer_mini_mp3.c:80: void mp3_send_cmd_null (unsigned char cmd) {
+;	-----------------------------------------
+;	 function mp3_send_cmd_null
+;	-----------------------------------------
+_mp3_send_cmd_null:
+	mov	r7,dpl
+	C$dfplayer_mini_mp3.c$81$1$25 ==.
+;	dfplayer_mini_mp3.c:81: send_buf[3] = cmd;
+	mov	(_send_buf + 0x0003),r7
+	C$dfplayer_mini_mp3.c$82$1$25 ==.
+;	dfplayer_mini_mp3.c:82: fill_uint16_bigend ((send_buf+5), 0);
+	clr	a
+	mov	_fill_uint16_bigend_PARM_2,a
+	mov	(_fill_uint16_bigend_PARM_2 + 1),a
+	mov	dptr,#(_send_buf + 0x0005)
+	mov	b,#0x40
+	lcall	_fill_uint16_bigend
+	C$dfplayer_mini_mp3.c$83$1$25 ==.
+;	dfplayer_mini_mp3.c:83: mp3_fill_checksum ();
+	lcall	_mp3_fill_checksum
+	C$dfplayer_mini_mp3.c$84$1$25 ==.
+;	dfplayer_mini_mp3.c:84: send_func ();
+	lcall	_send_func
+	C$dfplayer_mini_mp3.c$85$1$25 ==.
+	XG$mp3_send_cmd_null$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_play_physical'
+;------------------------------------------------------------
+;num                       Allocated to registers 
+;------------------------------------------------------------
+	G$mp3_play_physical$0$0 ==.
+	C$dfplayer_mini_mp3.c$86$1$25 ==.
+;	dfplayer_mini_mp3.c:86: void mp3_play_physical (unsigned int num) {
+;	-----------------------------------------
+;	 function mp3_play_physical
+;	-----------------------------------------
+_mp3_play_physical:
+	mov	_mp3_send_cmd_PARM_2,dpl
+	mov	(_mp3_send_cmd_PARM_2 + 1),dph
+	C$dfplayer_mini_mp3.c$87$1$27 ==.
+;	dfplayer_mini_mp3.c:87: mp3_send_cmd (0x03, num);
+	mov	dpl,#0x03
+	lcall	_mp3_send_cmd
+	C$dfplayer_mini_mp3.c$88$1$27 ==.
+	XG$mp3_play_physical$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_play_physical_null'
+;------------------------------------------------------------
+	G$mp3_play_physical_null$0$0 ==.
+	C$dfplayer_mini_mp3.c$89$1$27 ==.
+;	dfplayer_mini_mp3.c:89: void mp3_play_physical_null () {
+;	-----------------------------------------
+;	 function mp3_play_physical_null
+;	-----------------------------------------
+_mp3_play_physical_null:
+	C$dfplayer_mini_mp3.c$90$1$28 ==.
+;	dfplayer_mini_mp3.c:90: mp3_send_cmd_null (0x03);
+	mov	dpl,#0x03
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$91$1$28 ==.
+	XG$mp3_play_physical_null$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_next'
+;------------------------------------------------------------
+	G$mp3_next$0$0 ==.
+	C$dfplayer_mini_mp3.c$92$1$28 ==.
+;	dfplayer_mini_mp3.c:92: void mp3_next () {
+;	-----------------------------------------
+;	 function mp3_next
+;	-----------------------------------------
+_mp3_next:
+	C$dfplayer_mini_mp3.c$93$1$29 ==.
+;	dfplayer_mini_mp3.c:93: mp3_send_cmd_null (0x01);
+	mov	dpl,#0x01
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$94$1$29 ==.
+	XG$mp3_next$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_prev'
+;------------------------------------------------------------
+	G$mp3_prev$0$0 ==.
+	C$dfplayer_mini_mp3.c$95$1$29 ==.
+;	dfplayer_mini_mp3.c:95: void mp3_prev () {
+;	-----------------------------------------
+;	 function mp3_prev
+;	-----------------------------------------
+_mp3_prev:
+	C$dfplayer_mini_mp3.c$96$1$30 ==.
+;	dfplayer_mini_mp3.c:96: mp3_send_cmd_null (0x02);
+	mov	dpl,#0x02
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$97$1$30 ==.
+	XG$mp3_prev$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_set_volume'
+;------------------------------------------------------------
+;volume                    Allocated to registers 
+;------------------------------------------------------------
+	G$mp3_set_volume$0$0 ==.
+	C$dfplayer_mini_mp3.c$99$1$30 ==.
+;	dfplayer_mini_mp3.c:99: void mp3_set_volume (unsigned int volume) {
+;	-----------------------------------------
+;	 function mp3_set_volume
+;	-----------------------------------------
+_mp3_set_volume:
+	mov	_mp3_send_cmd_PARM_2,dpl
+	mov	(_mp3_send_cmd_PARM_2 + 1),dph
+	C$dfplayer_mini_mp3.c$100$1$32 ==.
+;	dfplayer_mini_mp3.c:100: mp3_send_cmd (0x06, volume);
+	mov	dpl,#0x06
+	lcall	_mp3_send_cmd
+	C$dfplayer_mini_mp3.c$101$1$32 ==.
+	XG$mp3_set_volume$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_set_EQ'
+;------------------------------------------------------------
+;eq                        Allocated to registers 
+;------------------------------------------------------------
+	G$mp3_set_EQ$0$0 ==.
+	C$dfplayer_mini_mp3.c$103$1$32 ==.
+;	dfplayer_mini_mp3.c:103: void mp3_set_EQ (unsigned int eq) {
+;	-----------------------------------------
+;	 function mp3_set_EQ
+;	-----------------------------------------
+_mp3_set_EQ:
+	mov	_mp3_send_cmd_PARM_2,dpl
+	mov	(_mp3_send_cmd_PARM_2 + 1),dph
+	C$dfplayer_mini_mp3.c$104$1$34 ==.
+;	dfplayer_mini_mp3.c:104: mp3_send_cmd (0x07, eq);
+	mov	dpl,#0x07
+	lcall	_mp3_send_cmd
+	C$dfplayer_mini_mp3.c$105$1$34 ==.
+	XG$mp3_set_EQ$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_set_device'
+;------------------------------------------------------------
+;device                    Allocated to registers 
+;------------------------------------------------------------
+	G$mp3_set_device$0$0 ==.
+	C$dfplayer_mini_mp3.c$107$1$34 ==.
+;	dfplayer_mini_mp3.c:107: void mp3_set_device (unsigned int device) {
+;	-----------------------------------------
+;	 function mp3_set_device
+;	-----------------------------------------
+_mp3_set_device:
+	mov	_mp3_send_cmd_PARM_2,dpl
+	mov	(_mp3_send_cmd_PARM_2 + 1),dph
+	C$dfplayer_mini_mp3.c$108$1$36 ==.
+;	dfplayer_mini_mp3.c:108: mp3_send_cmd (0x09, device);
+	mov	dpl,#0x09
+	lcall	_mp3_send_cmd
+	C$dfplayer_mini_mp3.c$109$1$36 ==.
+	XG$mp3_set_device$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_sleep'
+;------------------------------------------------------------
+	G$mp3_sleep$0$0 ==.
+	C$dfplayer_mini_mp3.c$110$1$36 ==.
+;	dfplayer_mini_mp3.c:110: void mp3_sleep () {
+;	-----------------------------------------
+;	 function mp3_sleep
+;	-----------------------------------------
+_mp3_sleep:
+	C$dfplayer_mini_mp3.c$111$1$37 ==.
+;	dfplayer_mini_mp3.c:111: mp3_send_cmd_null (0x0a);
+	mov	dpl,#0x0A
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$112$1$37 ==.
+	XG$mp3_sleep$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_reset'
+;------------------------------------------------------------
+	G$mp3_reset$0$0 ==.
+	C$dfplayer_mini_mp3.c$113$1$37 ==.
+;	dfplayer_mini_mp3.c:113: void mp3_reset () {
+;	-----------------------------------------
+;	 function mp3_reset
+;	-----------------------------------------
+_mp3_reset:
+	C$dfplayer_mini_mp3.c$114$1$38 ==.
+;	dfplayer_mini_mp3.c:114: mp3_send_cmd_null (0x0c);
+	mov	dpl,#0x0C
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$115$1$38 ==.
+	XG$mp3_reset$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_play_null'
+;------------------------------------------------------------
+	G$mp3_play_null$0$0 ==.
+	C$dfplayer_mini_mp3.c$116$1$38 ==.
+;	dfplayer_mini_mp3.c:116: void mp3_play_null () {
+;	-----------------------------------------
+;	 function mp3_play_null
+;	-----------------------------------------
+_mp3_play_null:
+	C$dfplayer_mini_mp3.c$117$1$39 ==.
+;	dfplayer_mini_mp3.c:117: mp3_send_cmd_null (0x0d);
+	mov	dpl,#0x0D
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$118$1$39 ==.
+	XG$mp3_play_null$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_pause'
+;------------------------------------------------------------
+	G$mp3_pause$0$0 ==.
+	C$dfplayer_mini_mp3.c$119$1$39 ==.
+;	dfplayer_mini_mp3.c:119: void mp3_pause () {
+;	-----------------------------------------
+;	 function mp3_pause
+;	-----------------------------------------
+_mp3_pause:
+	C$dfplayer_mini_mp3.c$120$1$40 ==.
+;	dfplayer_mini_mp3.c:120: mp3_send_cmd_null (0x0e);
+	mov	dpl,#0x0E
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$121$1$40 ==.
+	XG$mp3_pause$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_stop'
+;------------------------------------------------------------
+	G$mp3_stop$0$0 ==.
+	C$dfplayer_mini_mp3.c$122$1$40 ==.
+;	dfplayer_mini_mp3.c:122: void mp3_stop () {
+;	-----------------------------------------
+;	 function mp3_stop
+;	-----------------------------------------
+_mp3_stop:
+	C$dfplayer_mini_mp3.c$123$1$41 ==.
+;	dfplayer_mini_mp3.c:123: mp3_send_cmd_null (0x16);
+	mov	dpl,#0x16
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$124$1$41 ==.
+	XG$mp3_stop$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_play'
+;------------------------------------------------------------
+;num                       Allocated to registers 
+;------------------------------------------------------------
+	G$mp3_play$0$0 ==.
+	C$dfplayer_mini_mp3.c$126$1$41 ==.
+;	dfplayer_mini_mp3.c:126: void mp3_play (unsigned int num) {
+;	-----------------------------------------
+;	 function mp3_play
+;	-----------------------------------------
+_mp3_play:
+	mov	_mp3_send_cmd_PARM_2,dpl
+	mov	(_mp3_send_cmd_PARM_2 + 1),dph
+	C$dfplayer_mini_mp3.c$127$1$43 ==.
+;	dfplayer_mini_mp3.c:127: mp3_send_cmd (0x12, num);
+	mov	dpl,#0x12
+	lcall	_mp3_send_cmd
+	C$dfplayer_mini_mp3.c$128$1$43 ==.
+	XG$mp3_play$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_state'
+;------------------------------------------------------------
+	G$mp3_get_state$0$0 ==.
+	C$dfplayer_mini_mp3.c$129$1$43 ==.
+;	dfplayer_mini_mp3.c:129: void mp3_get_state () {
+;	-----------------------------------------
+;	 function mp3_get_state
+;	-----------------------------------------
+_mp3_get_state:
+	C$dfplayer_mini_mp3.c$130$1$44 ==.
+;	dfplayer_mini_mp3.c:130: mp3_send_cmd_null (0x42);
+	mov	dpl,#0x42
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$131$1$44 ==.
+	XG$mp3_get_state$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_volume'
+;------------------------------------------------------------
+	G$mp3_get_volume$0$0 ==.
+	C$dfplayer_mini_mp3.c$132$1$44 ==.
+;	dfplayer_mini_mp3.c:132: void mp3_get_volume () {
+;	-----------------------------------------
+;	 function mp3_get_volume
+;	-----------------------------------------
+_mp3_get_volume:
+	C$dfplayer_mini_mp3.c$133$1$45 ==.
+;	dfplayer_mini_mp3.c:133: mp3_send_cmd_null (0x43);
+	mov	dpl,#0x43
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$134$1$45 ==.
+	XG$mp3_get_volume$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_u_sum'
+;------------------------------------------------------------
+	G$mp3_get_u_sum$0$0 ==.
+	C$dfplayer_mini_mp3.c$135$1$45 ==.
+;	dfplayer_mini_mp3.c:135: void mp3_get_u_sum () {
+;	-----------------------------------------
+;	 function mp3_get_u_sum
+;	-----------------------------------------
+_mp3_get_u_sum:
+	C$dfplayer_mini_mp3.c$136$1$46 ==.
+;	dfplayer_mini_mp3.c:136: mp3_send_cmd_null (0x47);
+	mov	dpl,#0x47
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$137$1$46 ==.
+	XG$mp3_get_u_sum$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_tf_sum'
+;------------------------------------------------------------
+	G$mp3_get_tf_sum$0$0 ==.
+	C$dfplayer_mini_mp3.c$138$1$46 ==.
+;	dfplayer_mini_mp3.c:138: void mp3_get_tf_sum () {
+;	-----------------------------------------
+;	 function mp3_get_tf_sum
+;	-----------------------------------------
+_mp3_get_tf_sum:
+	C$dfplayer_mini_mp3.c$139$1$47 ==.
+;	dfplayer_mini_mp3.c:139: mp3_send_cmd_null (0x48);
+	mov	dpl,#0x48
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$140$1$47 ==.
+	XG$mp3_get_tf_sum$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_flash_sum'
+;------------------------------------------------------------
+	G$mp3_get_flash_sum$0$0 ==.
+	C$dfplayer_mini_mp3.c$141$1$47 ==.
+;	dfplayer_mini_mp3.c:141: void mp3_get_flash_sum () {
+;	-----------------------------------------
+;	 function mp3_get_flash_sum
+;	-----------------------------------------
+_mp3_get_flash_sum:
+	C$dfplayer_mini_mp3.c$142$1$48 ==.
+;	dfplayer_mini_mp3.c:142: mp3_send_cmd_null (0x49);
+	mov	dpl,#0x49
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$143$1$48 ==.
+	XG$mp3_get_flash_sum$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_tf_current'
+;------------------------------------------------------------
+	G$mp3_get_tf_current$0$0 ==.
+	C$dfplayer_mini_mp3.c$144$1$48 ==.
+;	dfplayer_mini_mp3.c:144: void mp3_get_tf_current () {
+;	-----------------------------------------
+;	 function mp3_get_tf_current
+;	-----------------------------------------
+_mp3_get_tf_current:
+	C$dfplayer_mini_mp3.c$145$1$49 ==.
+;	dfplayer_mini_mp3.c:145: mp3_send_cmd_null (0x4c);
+	mov	dpl,#0x4C
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$146$1$49 ==.
+	XG$mp3_get_tf_current$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_u_current'
+;------------------------------------------------------------
+	G$mp3_get_u_current$0$0 ==.
+	C$dfplayer_mini_mp3.c$147$1$49 ==.
+;	dfplayer_mini_mp3.c:147: void mp3_get_u_current () {
+;	-----------------------------------------
+;	 function mp3_get_u_current
+;	-----------------------------------------
+_mp3_get_u_current:
+	C$dfplayer_mini_mp3.c$148$1$50 ==.
+;	dfplayer_mini_mp3.c:148: mp3_send_cmd_null (0x4b);
+	mov	dpl,#0x4B
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$149$1$50 ==.
+	XG$mp3_get_u_current$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_get_flash_current'
+;------------------------------------------------------------
+	G$mp3_get_flash_current$0$0 ==.
+	C$dfplayer_mini_mp3.c$150$1$50 ==.
+;	dfplayer_mini_mp3.c:150: void mp3_get_flash_current () {
+;	-----------------------------------------
+;	 function mp3_get_flash_current
+;	-----------------------------------------
+_mp3_get_flash_current:
+	C$dfplayer_mini_mp3.c$151$1$51 ==.
+;	dfplayer_mini_mp3.c:151: mp3_send_cmd_null (0x4d);
+	mov	dpl,#0x4D
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$152$1$51 ==.
+	XG$mp3_get_flash_current$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_single_loop'
+;------------------------------------------------------------
+	G$mp3_single_loop$0$0 ==.
+	C$dfplayer_mini_mp3.c$153$1$51 ==.
+;	dfplayer_mini_mp3.c:153: void mp3_single_loop (bool state) {
+;	-----------------------------------------
+;	 function mp3_single_loop
+;	-----------------------------------------
+_mp3_single_loop:
+	C$dfplayer_mini_mp3.c$154$1$53 ==.
+;	dfplayer_mini_mp3.c:154: mp3_send_cmd (0x19, !state);
+	mov	c,_mp3_single_loop_PARM_1
+	cpl	c
+	clr	a
+	rlc	a
+	mov	r7,a
+	mov	_mp3_send_cmd_PARM_2,r7
+	mov	(_mp3_send_cmd_PARM_2 + 1),#0x00
+	mov	dpl,#0x19
+	lcall	_mp3_send_cmd
+	C$dfplayer_mini_mp3.c$155$1$53 ==.
+	XG$mp3_single_loop$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_single_play'
+;------------------------------------------------------------
+;num                       Allocated to registers r6 r7 
+;------------------------------------------------------------
+	G$mp3_single_play$0$0 ==.
+	C$dfplayer_mini_mp3.c$157$1$53 ==.
+;	dfplayer_mini_mp3.c:157: void mp3_single_play (unsigned int num) {
+;	-----------------------------------------
+;	 function mp3_single_play
+;	-----------------------------------------
+_mp3_single_play:
+	C$dfplayer_mini_mp3.c$158$1$55 ==.
+;	dfplayer_mini_mp3.c:158: mp3_play (num);
+	lcall	_mp3_play
+	C$dfplayer_mini_mp3.c$159$1$55 ==.
+;	dfplayer_mini_mp3.c:159: delay(10);
+	mov	dptr,#0x000A
+	lcall	_delay
+	C$dfplayer_mini_mp3.c$160$1$55 ==.
+;	dfplayer_mini_mp3.c:160: mp3_single_loop (true); 
+	setb	_mp3_single_loop_PARM_1
+	lcall	_mp3_single_loop
+	C$dfplayer_mini_mp3.c$162$1$55 ==.
+	XG$mp3_single_play$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_DAC'
+;------------------------------------------------------------
+	G$mp3_DAC$0$0 ==.
+	C$dfplayer_mini_mp3.c$163$1$55 ==.
+;	dfplayer_mini_mp3.c:163: void mp3_DAC (bool state) {
+;	-----------------------------------------
+;	 function mp3_DAC
+;	-----------------------------------------
+_mp3_DAC:
+	C$dfplayer_mini_mp3.c$164$1$57 ==.
+;	dfplayer_mini_mp3.c:164: mp3_send_cmd (0x1a, !state);
+	mov	c,_mp3_DAC_PARM_1
+	cpl	c
+	clr	a
+	rlc	a
+	mov	r7,a
+	mov	_mp3_send_cmd_PARM_2,r7
+	mov	(_mp3_send_cmd_PARM_2 + 1),#0x00
+	mov	dpl,#0x1A
+	lcall	_mp3_send_cmd
+	C$dfplayer_mini_mp3.c$165$1$57 ==.
+	XG$mp3_DAC$0$0 ==.
+	ret
+;------------------------------------------------------------
+;Allocation info for local variables in function 'mp3_random_play'
+;------------------------------------------------------------
+	G$mp3_random_play$0$0 ==.
+	C$dfplayer_mini_mp3.c$166$1$57 ==.
+;	dfplayer_mini_mp3.c:166: void mp3_random_play () {
+;	-----------------------------------------
+;	 function mp3_random_play
+;	-----------------------------------------
+_mp3_random_play:
+	C$dfplayer_mini_mp3.c$167$1$58 ==.
+;	dfplayer_mini_mp3.c:167: mp3_send_cmd_null (0x18);
+	mov	dpl,#0x18
+	lcall	_mp3_send_cmd_null
+	C$dfplayer_mini_mp3.c$168$1$58 ==.
+	XG$mp3_random_play$0$0 ==.
+	ret
+	.area CSEG    (CODE)
+	.area CONST   (CODE)
+	.area XINIT   (CODE)
+	.area CABS    (ABS,CODE)
